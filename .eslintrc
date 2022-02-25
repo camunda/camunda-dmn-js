@@ -1,6 +1,7 @@
 {
   "extends": [
-    "plugin:bpmn-io/es6"
+    "plugin:bpmn-io/es6",
+    "plugin:bpmn-io/jsx"
   ],
   "env": {
     "browser": true

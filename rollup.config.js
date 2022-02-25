@@ -6,6 +6,8 @@ import json from '@rollup/plugin-json';
 import { terser } from 'rollup-plugin-terser';
 import copy from 'rollup-plugin-copy';
 import replace from '@rollup/plugin-replace';
+import babel from '@rollup/plugin-babel';
+
 
 const outputDir = 'dist';
 
@@ -93,8 +95,9 @@ function pgl(plugins = []) {
         'main'
       ]
     }),
-    commonjs(),
     json(),
+    babel(),
+    commonjs(),
     ...plugins
   ];
 }
