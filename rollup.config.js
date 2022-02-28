@@ -29,6 +29,10 @@ const styles = [
   {
     src: resolve('dmn-js', '/dist/assets/dmn-font/{font,css}/**'),
     dest: 'dist/assets/dmn-font'
+  },
+  {
+    src: resolve('dmn-js-properties-panel', '/dist/assets/*.css'),
+    dest: 'dist/assets'
   }
 ].concat(domains.map(function(domain) {
   return {
