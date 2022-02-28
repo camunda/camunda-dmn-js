@@ -9,6 +9,8 @@ let DMN_JS;
 
 insertStyles();
 
+export * from './util/EventUtil';
+
 export function bootstrapDmnJS(Modeler, diagram, options = {}) {
   return function() {
     const testContainer = MochaTestContainer.get(this);
