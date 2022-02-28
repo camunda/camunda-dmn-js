@@ -8,6 +8,7 @@ import copy from 'rollup-plugin-copy';
 import replace from '@rollup/plugin-replace';
 import babel from '@rollup/plugin-babel';
 
+import pkg from './package.json';
 
 const outputDir = 'dist';
 
@@ -79,7 +80,23 @@ const configs = distros.reduce(function(configs, distro) {
       ])
     }
   ];
-}, []);
+}, []).concat({
+  input: './lib/index.js',
+  output: [
+    {
+      sourcemap: true,
+      format: 'commonjs',
+      file: pkg.main,
+    },
+    {
+      sourcemap: true,
+      format: 'esm',
+      file: pkg.module
+    }
+  ],
+  external: externalDependencies(),
+  plugins: pgl()
+});
 
 export default configs;
 
@@ -96,7 +113,9 @@ function pgl(plugins = []) {
       ]
     }),
     json(),
-    babel(),
+    babel({
+      babelHelpers: 'bundled'
+    }),
     commonjs(),
     ...plugins
   ];
@@ -117,4 +136,12 @@ function resolve(module, sub) {
   var pkg = require.resolve(module + '/package.json');
 
   return path.dirname(pkg) + sub;
+}
+
+function externalDependencies() {
+  const nonbundledDependencies = Object.keys({ ...pkg.dependencies, ...pkg.peerDependencies });
+
+  return id => {
+    return nonbundledDependencies.find(dep => id.startsWith(dep));
+  };
 }
