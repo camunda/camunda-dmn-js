@@ -13,16 +13,28 @@ const singleStart = window.__env__ && window.__env__.SINGLE_START === 'camunda-p
 
 describe('CamundaPlatformModeler', function() {
 
-  let container;
+  let testContainer, container, propertiesContainer;
 
   beforeEach(function() {
-    container = MochaTestContainer.get(this);
+    testContainer = MochaTestContainer.get(this);
+
+    container = document.createElement('div');
+    container.classList.add('container');
+
+    propertiesContainer = document.createElement('div');
+    propertiesContainer.classList.add('properties-container');
+
+    testContainer.append(container, propertiesContainer);
   });
 
   (singleStart ? it.only : it)('should import DMN', async function() {
 
     // given
-    const modeler = new Modeler({ container });
+    const modeler = new Modeler({ container, common: {
+      propertiesPanel: {
+        parent: propertiesContainer
+      }
+    } });
 
     // when
     const { warnings } = await modeler.importXML(diagramXML);
