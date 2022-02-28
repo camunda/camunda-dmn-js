@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="definitions" name="definitions" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.0.0-alpha.0">
+  <decision id="decision" name="Check Order">
+    <decisionTable id="decisionTable">
+      <input id="input1" label="Customer Status">
+        <inputExpression id="inputExpression1" typeRef="dateTime">
+          <text>status</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1k23z42">
+        <inputExpression id="LiteralExpression_1f4ev02" typeRef="time">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_08io9s7">
+        <inputExpression id="LiteralExpression_00afu2p" typeRef="dayTimeDuration">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0hb6d40">
+        <inputExpression id="LiteralExpression_1dvpedw" typeRef="yearMonthDuration">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="output1" label="Check Result" name="result" typeRef="date" />
+      <rule id="rule1">
+        <description>Bronze is really not that good</description>
+        <inputEntry id="dateTime">
+          <text>date and time("2018-01-25T00:00:00")</text>
+        </inputEntry>
+        <inputEntry id="time">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="dayTimeDuration">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="yearMonthDuration">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="outputEntry1">
+          <text>date and time("2018-01-25T00:00:00")</text>
+        </outputEntry>
+      </rule>
+      <rule id="rule2">
+        <description>Silver is actually quite okay</description>
+        <inputEntry id="inputEntry3">
+          <text>&lt; date and time("2018-01-25T00:00:00")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cf0bmo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1073kqv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o3kp0w">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="outputEntry3">
+          <text>foo</text>
+        </outputEntry>
+      </rule>
+      <rule id="rule3">
+        <description>Same here</description>
+        <inputEntry id="inputEntry5">
+          <text>&gt; date and time("2018-01-25T00:00:00")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0merrbr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bls2ly">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q60sc0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="outputEntry5">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="rule4">
+        <description>Gold is really good, try even harder next time though</description>
+        <inputEntry id="inputEntry7">
+          <text>[date and time("2018-01-25T00:00:00")..date and time("2018-01-25T23:59:59")]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cehgs6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_111olkd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1py6ham">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="outputEntry7">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="rule5">
+        <inputEntry id="inputEntry6">
+          <text>foo</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0swwv62">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l61shk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hhegl9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="outputEntry6">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="rule6">
+        <inputEntry id="inputEntry8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_173b269">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u2eoab">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yhozgz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="outputEntry8">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
