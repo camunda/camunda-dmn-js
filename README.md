@@ -29,7 +29,12 @@ into your web-application.
 
 ```js
 var dmnModeler = new DmnModeler({
-  container: '#canvas'
+  container: '#canvas',
+  drd: {
+    propertiesPanel: {
+      parent: '#properties-container'
+    }
+  }
 });
 
 try {
