@@ -10,6 +10,9 @@ import babel from '@rollup/plugin-babel';
 
 import pkg from './package.json';
 
+const nonbundledDependencies = Object.keys({ ...pkg.dependencies, ...pkg.peerDependencies });
+const nonExternalDependencies = [ 'dmn-js-shared' ];
+
 const outputDir = 'dist';
 
 const domains = [
@@ -139,9 +142,12 @@ function resolve(module, sub) {
 }
 
 function externalDependencies() {
-  const nonbundledDependencies = Object.keys({ ...pkg.dependencies, ...pkg.peerDependencies });
-
   return id => {
-    return nonbundledDependencies.find(dep => id.startsWith(dep));
+    return nonbundledDependencies.find(dep => dependencyMatches(id, dep)) &&
+      !nonExternalDependencies.find(dep => dependencyMatches(id, dep));
   };
+}
+
+function dependencyMatches(id, dependency) {
+  return id === dependency || id.startsWith(dependency + '/');
 }
