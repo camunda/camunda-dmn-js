@@ -6,22 +6,25 @@ This document lists and describes all available distributions.
 
 This delivers the basic DMN modeling experience of the [Camunda Modeler](https://github.com/camunda/camunda-modeler/), without any process engine specific behaviors.
 
-This includes a set of extension modules, as follows
+This includes a set of extension modules, as follows:
 
-  * [diagram-js-origin](https://github.com/bpmn-io/diagram-js-origin) - A point of origin cross and contour for diagram-js (disabled as default)
-  * [@bpmn-io/align-to-origin](https://github.com/bpmn-io/align-to-origin) - Nicely align your diagrams to the coordinate origin (enabled as default)
+  * [diagram-js-origin](https://github.com/bpmn-io/diagram-js-origin) - A point of origin cross and contour for diagram-js (disabled per default)
+  * [@bpmn-io/align-to-origin](https://github.com/bpmn-io/align-to-origin) - Nicely align your diagrams to the coordinate origin (enabled per default)
+  * [dmn-js-properties-panel](https://github.com/bpmn-io/dmn-js-properties-panel) - A properties panel for DMN
 
 Install and import the Modeler via npm to include it in your application.
 
 ```js
-import DmnModeler from 'camunda-dmn-js/lib/base/Modeler';
+import { BaseDmnModeler as DmnModeler } from 'camunda-dmn-js';
 
 import 'camunda-dmn-js/dist/assets/base-modeler.css';
 
-var dmnModeler = new DmnModeler({
+const dmnModeler = new DmnModeler({
   container: '#canvas',
-  propertiesPanel: {
-    parent: '#properties'
+  drd: {
+    propertiesPanel: {
+      parent: '#properties'
+    }
   }
 });
 ```
@@ -32,18 +35,21 @@ This delivers a distribution to mirror the modeling experience of the Camunda Mo
 
 The Modeler includes all extensions provided by the [base distribution](#base-modeler). To provide the Camunda Platform specific properties, it includes additionally:
 
-  * [camunda-bpmn-moddle](https://github.com/camunda/camunda-bpmn-moddle) - Camunda moddle extensions for DMN
-  * TODO
+  * [camunda-dmn-moddle](https://github.com/camunda/camunda-dmn-moddle) - Camunda moddle extensions for DMN
+  * [a Camunda Platform specific properties provider](https://github.com/bpmn-io/dmn-js-properties-panel/blob/master/src/provider/camunda/CamundaPropertiesProvider.js)
+  * Camunda Platform specific data types, expression languages, and properties
 
 ```js
-import DmnModeler from 'camunda-dmn-js/lib/camunda-platform/Modeler';
+import { CamundaPlatformModeler as DmnModeler } from 'camunda-dmn-js';
 
 import 'camunda-dmn-js/dist/assets/camunda-platform-modeler.css';
 
-var dmnModeler = new DmnModeler({
+const dmnModeler = new DmnModeler({
   container: '#canvas',
-  propertiesPanel: {
-    parent: '#properties'
+  drd: {
+    propertiesPanel: {
+      parent: '#properties'
+    }
   }
 });
 ```
@@ -52,19 +58,19 @@ var dmnModeler = new DmnModeler({
 
 This delivers a distribution to mirror the modeling experience of the Camunda Modeler to work on Camunda Cloud.
 
-The Modeler includes all extensions provided by the [base distribution](#base-modeler). To provide the Camunda Cloud specific properties, it includes additionally:
-
-* TODO
+The Modeler includes all extensions provided by the [base distribution](#base-modeler).
 
 ```js
-import DmnModeler from 'camunda-dmn-js/lib/camunda-cloud/Modeler';
+import { CamundaCloudModeler as DmnModeler } from 'camunda-dmn-js';
 
 import 'camunda-dmn-js/dist/assets/camunda-cloud-modeler.css';
 
-var dmnModeler = new DmnModeler({
+const dmnModeler = new DmnModeler({
   container: '#canvas',
-  propertiesPanel: {
-    parent: '#properties'
+  drd: {
+    propertiesPanel: {
+      parent: '#properties'
+    }
   }
 });
 ```
