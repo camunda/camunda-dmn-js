@@ -27,7 +27,7 @@ const styles = [
     dest: 'dist/assets'
   },
   {
-    src: resolve('dmn-js', '/dist/assets/dmn-font/{font,css}/**'),
+    src: resolve('dmn-js', '/dist/assets/dmn-font/{font,css}'),
     dest: 'dist/assets/dmn-font'
   },
   {
