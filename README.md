@@ -20,7 +20,7 @@ Use a pre-packaged distribution
 or install it via npm
 
 ```js
-import DmnModeler from 'camunda-dmn-js';
+import { CamundaPlatformModeler as DmnModeler } from 'camunda-dmn-js';
 
 import 'camunda-dmn-js/dist/assets/camunda-platform-modeler.css';
 ```
