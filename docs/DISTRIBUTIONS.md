@@ -29,6 +29,20 @@ const dmnModeler = new DmnModeler({
 });
 ```
 
+To enable `diagram-js-origin`, pass `disableAdjustOrigin=true` to either drd or common config:
+
+```js
+const dmnModeler = new DmnModeler({
+  container: '#canvas',
+  drd: {
+    disableAdjustOrigin: true,
+    propertiesPanel: {
+      parent: '#properties'
+    }
+  }
+});
+```
+
 ## Camunda Platform Modeler
 
 This delivers a distribution to mirror the modeling experience of the Camunda Modeler to work on the Camunda Platform.

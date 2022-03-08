@@ -4,6 +4,7 @@ import Modeler from '../../lib/base/Modeler';
 import '../helper';
 
 import diagramXML from '../fixtures/simple.dmn';
+import drdXML from '../fixtures/diagram.dmn';
 
 const singleStart = window.__env__ && window.__env__.SINGLE_START === 'base-modeler';
 
@@ -38,5 +39,54 @@ describe('BaseModeler', function() {
 
     // then
     expect(warnings).to.be.empty;
+  });
+
+
+  describe('disableAdjustToOrigin', function() {
+
+    it('should NOT disable adjust origin per default', async function() {
+
+      // given
+      const modeler = new Modeler({ container });
+
+      // when
+      await modeler.importXML(drdXML);
+
+      // then
+      const activeViewer = modeler.getActiveViewer();
+      expect(activeViewer.get('alignToOrigin', false)).to.exist;
+    });
+
+
+    it('should disable adjust origin when passed via `common`', async function() {
+
+      // given
+      const modeler = new Modeler({ container, common: {
+        disableAdjustOrigin: true
+      } });
+
+      // when
+      await modeler.importXML(drdXML);
+
+      // then
+      const activeViewer = modeler.getActiveViewer();
+      expect(activeViewer.get('alignToOrigin', false)).not.to.exist;
+    });
+
+
+    it('should disable adjust origin when passed via `drd`', async function() {
+
+      // given
+      const modeler = new Modeler({ container, drd: {
+        disableAdjustOrigin: true
+      } });
+
+      // when
+      await modeler.importXML(drdXML);
+
+      // then
+      const activeViewer = modeler.getActiveViewer();
+      expect(activeViewer.get('alignToOrigin', false)).not.to.exist;
+    });
   });
 });
