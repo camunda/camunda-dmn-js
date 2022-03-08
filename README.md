@@ -12,15 +12,15 @@ This project is designed to deliver different DMN modeling distributions. Instea
 Use a pre-packaged distribution
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/camunda-dmn-js@0.1.0/dist/assets/camunda-platform-modeler.css" />
+<link rel="stylesheet" href="https://unpkg.com/camunda-dmn-js/dist/assets/camunda-platform-modeler.css" />
 
-<script src="https://unpkg.com/camunda-dmn-js@0.1.0/dist/camunda-platform-modeler.development.js"></script>
+<script src="https://unpkg.com/camunda-dmn-js/dist/camunda-platform-modeler.development.js"></script>
 ```
 
 or install it via npm
 
 ```js
-import DmnModeler from 'camunda-dmn-js/lib/camunda-platform/Modeler';
+import DmnModeler from 'camunda-dmn-js';
 
 import 'camunda-dmn-js/dist/assets/camunda-platform-modeler.css';
 ```
