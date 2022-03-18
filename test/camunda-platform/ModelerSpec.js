@@ -13,34 +13,43 @@ const singleStart = window.__env__ && window.__env__.SINGLE_START === 'camunda-p
 
 describe('CamundaPlatformModeler', function() {
 
-  let testContainer, container, propertiesContainer;
+  describe('bootstrap', function() {
 
-  beforeEach(function() {
-    testContainer = MochaTestContainer.get(this);
+    let testContainer, container, propertiesContainer, overviewContainer;
 
-    container = document.createElement('div');
-    container.classList.add('container');
+    beforeEach(function() {
+      testContainer = MochaTestContainer.get(this);
 
-    propertiesContainer = document.createElement('div');
-    propertiesContainer.classList.add('properties-container');
+      container = document.createElement('div');
+      container.classList.add('container');
 
-    testContainer.append(container, propertiesContainer);
-  });
+      propertiesContainer = document.createElement('div');
+      propertiesContainer.classList.add('properties-container');
 
-  (singleStart ? it.only : it)('should import DMN', async function() {
+      overviewContainer = document.createElement('div');
+      overviewContainer.classList.add('overview-container');
 
-    // given
-    const modeler = new Modeler({ container, common: {
-      propertiesPanel: {
-        parent: propertiesContainer
-      }
-    } });
+      testContainer.append(overviewContainer, container, propertiesContainer);
+    });
 
-    // when
-    const { warnings } = await modeler.importXML(diagramXML);
+    (singleStart ? it.only : it)('should import DMN', async function() {
 
-    // then
-    expect(warnings).to.be.empty;
+      // given
+      const modeler = new Modeler({ container, common: {
+        propertiesPanel: {
+          parent: propertiesContainer
+        },
+        overview: {
+          parent: overviewContainer
+        }
+      } });
+
+      // when
+      const { warnings } = await modeler.importXML(diagramXML);
+
+      // then
+      expect(warnings).to.be.empty;
+    });
   });
 
 

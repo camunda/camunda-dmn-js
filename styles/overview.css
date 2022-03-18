@@ -1,0 +1,12 @@
+.djs-overview-container {
+  background-color: var(--color-grey-225-10-95);
+
+  --default-stroke-color: #666;
+  --default-fill-color: #fafafa;
+}
+
+.djs-overview-container .open,
+.djs-overview-container .can-open:hover {
+  --default-stroke-color: var(--color-blue-205-100-50);
+  --default-fill-color: var(--color-blue-205-100-95);
+}
