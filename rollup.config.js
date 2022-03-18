@@ -33,13 +33,12 @@ const styles = [
   {
     src: resolve('dmn-js-properties-panel', '/dist/assets/*.css'),
     dest: 'dist/assets'
-  }
-].concat(domains.map(function(domain) {
-  return {
-    src: 'styles/' + domain + '-modeler.css',
+  },
+  {
+    src: 'styles/*.css',
     dest: 'dist/assets'
-  };
-}));
+  }
+];
 
 const distros = domains.map(function(domain) {
   return {

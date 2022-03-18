@@ -11,7 +11,7 @@ const singleStart = window.__env__ && window.__env__.SINGLE_START === 'base-mode
 
 describe('BaseModeler', function() {
 
-  let testContainer, container, propertiesContainer;
+  let testContainer, container, propertiesContainer, overviewContainer;
 
   beforeEach(function() {
     testContainer = MochaTestContainer.get(this);
@@ -22,7 +22,10 @@ describe('BaseModeler', function() {
     propertiesContainer = document.createElement('div');
     propertiesContainer.classList.add('properties-container');
 
-    testContainer.append(container, propertiesContainer);
+    overviewContainer = document.createElement('div');
+    overviewContainer.classList.add('overview-container');
+
+    testContainer.append(overviewContainer, container, propertiesContainer);
   });
 
   (singleStart ? it.only : it)('should import DMN', async function() {
@@ -31,11 +34,16 @@ describe('BaseModeler', function() {
     const modeler = new Modeler({ container, common: {
       propertiesPanel: {
         parent: propertiesContainer
+      },
+      overview: {
+        parent: overviewContainer
       }
     } });
 
     // when
     const { warnings } = await modeler.importXML(diagramXML);
+
+    window.dmn = modeler;
 
     // then
     expect(warnings).to.be.empty;

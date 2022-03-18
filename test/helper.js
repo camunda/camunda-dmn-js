@@ -1,8 +1,11 @@
 import MochaTestContainer from 'mocha-test-container-support';
 import { insertCSS } from 'dmn-js/test/helper';
 
-import PlatformModeler from '../lib/camunda-platform/Modeler';
-import CloudModeler from '../lib/camunda-cloud/Modeler';
+import {
+  BaseModeler,
+  CamundaPlatformModeler,
+  CamundaCloudModeler
+} from '../lib';
 
 
 let DMN_JS;
@@ -21,7 +24,10 @@ export function bootstrapDmnJS(Modeler, diagram, options = {}) {
     const propertiesContainer = document.createElement('div');
     propertiesContainer.classList.add('properties-container');
 
-    testContainer.append(container, propertiesContainer);
+    const overviewContainer = document.createElement('div');
+    overviewContainer.classList.add('overview-container');
+
+    testContainer.append(overviewContainer, container, propertiesContainer);
 
     const editor = new Modeler({
       container: container,
@@ -33,22 +39,29 @@ export function bootstrapDmnJS(Modeler, diagram, options = {}) {
         propertiesPanel: {
           parent: propertiesContainer
         },
+        overview: {
+          parent: overviewContainer
+        },
         ...options.common
       }
     });
 
-    DMN_JS = editor;
+    DMN_JS = window.DMN_JS = editor;
 
     return editor.importXML(diagram);
   };
 }
 
+export function bootstrapBaseModeler(diagram, options = {}) {
+  return bootstrapDmnJS(BaseModeler, diagram, options);
+}
+
 export function bootstrapCamundaPlatformModeler(diagram, options = {}) {
-  return bootstrapDmnJS(PlatformModeler, diagram, options);
+  return bootstrapDmnJS(CamundaPlatformModeler, diagram, options);
 }
 
 export function bootstrapCamundaCloudModeler(diagram, options = {}) {
-  return bootstrapDmnJS(CloudModeler, diagram, options);
+  return bootstrapDmnJS(CamundaCloudModeler, diagram, options);
 }
 
 export function getDmnJS() {
@@ -63,6 +76,10 @@ export function inject(fn) {
 
 function insertStyles() {
   const testStyles = `
+body {
+  margin: 8px
+}
+
 .test-container {
   padding-bottom: 24px;
 }
@@ -71,8 +88,13 @@ function insertStyles() {
   display: flex;
 }
 
+.test-container:only-of-type {
+  height: calc(100vh -  42px);
+}
+
 .container {
   flex: 1;
+  overflow: auto;
 }
 
 .properties-container {
@@ -82,6 +104,12 @@ function insertStyles() {
   overflow: auto;
 }
 
+.overview-container {
+  width: 500px;
+  flex: 0 0 auto;
+}
+
+.overview-container:empty,
 .properties-container:empty {
   display: none;
 }
@@ -96,7 +124,8 @@ function insertStyles() {
     { name: 'dmn-js-drd.css', css: require('dmn-js/dist/assets/dmn-js-drd.css').default },
     { name: 'dmn-js-literal-expression.css', css: require('dmn-js/dist/assets/dmn-js-literal-expression.css').default },
     { name: 'dmn-js-shared.css', css: require('dmn-js/dist/assets/dmn-js-shared.css').default },
-    { name: 'properties-panel.css', css: require('dmn-js-properties-panel/dist/assets/properties-panel.css').default }
+    { name: 'properties-panel.css', css: require('dmn-js-properties-panel/dist/assets/properties-panel.css').default },
+    { name: 'overview.css', css: require('../styles/overview.css').default }
   ];
 
   styles.forEach(({ name, css }) => insertCSS(name, css));
