@@ -6,6 +6,11 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.2.1
+
+* `DEPS`: update to `dmn-js-properties-panel@1.0.0-alpha.2`
+* `DEPS`: update to `dmn-js@12.1.0`
+
 ## 0.2.0
 
 * `FEAT`: move `disableAdjustOrigin` config to common/drd section
