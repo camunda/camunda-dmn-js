@@ -8,6 +8,8 @@ import {
   inject
 } from '../../../helper';
 
+import { waitFor } from '@testing-library/dom';
+
 
 describe('Overview', function() {
 
@@ -149,10 +151,10 @@ describe('Overview', function() {
         await openView(_parent, 'decisionTable');
 
         // then
-        return expectEventually(() => {
+        await waitFor(() => {
           const newNumberOfElements = overviewContainer.get('elementRegistry').getAll().length;
 
-          return newNumberOfElements === (originalNumberOfElements + 1);
+          expect(newNumberOfElements).to.equal(originalNumberOfElements + 1);
         });
       })
     );
@@ -178,9 +180,10 @@ describe('Overview', function() {
       eventBus.fire('element.click', { element: decision });
 
       // then
-      await expectEventually(() => {
+      await waitFor(() => {
         const visual = elementRegistry.getGraphics(decision);
-        return visual.classList.contains('open');
+
+        expect(visual.classList.contains('open')).to.be.true;
       });
     }));
 
@@ -241,18 +244,4 @@ async function waitForOverviewUpdate(overviewContainer) {
       resolve();
     });
   });
-}
-
-/**
- * Wait 10 promise ticks to ensure predicate does not throw.
- * @param {() => boolean} predicate
- */
-async function expectEventually(predicate) {
-  for (let i = 0; i < 10; i++) {
-    if (predicate()) {
-      return;
-    }
-    await new Promise(resolve => setTimeout(resolve, 0));
-  }
-  throw new Error('Predicate did not return true in time.');
 }
