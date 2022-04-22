@@ -6,6 +6,11 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.3.0
+
+* `FEAT`: add overview ([#2](https://github.com/camunda/camunda-dmn-js/issues/2))
+* `DEPS`: update dependencies
+
 ## 0.2.3
 
 * `DEPS`: update to `dmn-js-properties-panel@1.0.0-alpha.3`
