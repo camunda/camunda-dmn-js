@@ -6,6 +6,11 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.4.0
+
+* `FEAT`: temporarily disable overview ([#18](https://github.com/camunda/camunda-dmn-js/pull/18))
+* `DEPS`: update to `dmn-js-properties-panel@1.1.0` ([changelog](https://github.com/bpmn-io/dmn-js-properties-panel/blob/master/CHANGELOG.md#110))
+
 ## 0.3.0
 
 * `FEAT`: add overview ([#2](https://github.com/camunda/camunda-dmn-js/issues/2))
