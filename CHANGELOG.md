@@ -6,6 +6,10 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.4.1
+
+* `DEPS`: update to `diagram-js@8.7.0` ([changelog](https://github.com/bpmn-io/diagram-js/blob/master/CHANGELOG.md#870))
+
 ## 0.4.0
 
 * `FEAT`: temporarily disable overview ([#18](https://github.com/camunda/camunda-dmn-js/pull/18))
