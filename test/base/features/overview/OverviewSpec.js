@@ -11,7 +11,8 @@ import {
 import { waitFor } from '@testing-library/dom';
 
 
-describe('Overview', function() {
+// TODO(barmac): re-enable when overview is done
+describe.skip('Overview', function() {
 
   let container;
 
