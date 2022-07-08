@@ -56,7 +56,7 @@
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
-    "@bpmn-io/properties-panel": "^0.11.0",
+    "@bpmn-io/properties-panel": "^0.15.0",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-json": "^4.1.0",
@@ -68,7 +68,7 @@
     "chai": "^4.3.6",
     "cross-env": "^7.0.3",
     "dmn-js": "^12.1.1",
-    "dmn-js-properties-panel": "^1.0.0",
+    "dmn-js-properties-panel": "^1.1.0",
     "dmn-js-shared": "^12.1.1",
     "eslint": "^7.32.0",
     "eslint-plugin-bpmn-io": "^0.13.0",
@@ -101,7 +101,7 @@
     "webpack": "^5.72.0"
   },
   "peerDependencies": {
-    "@bpmn-io/properties-panel": "0.13.x",
+    "@bpmn-io/properties-panel": "0.15.x",
     "dmn-js": "^12.1.1",
     "dmn-js-properties-panel": "^1.0.0",
     "inferno": "5.6.x"
