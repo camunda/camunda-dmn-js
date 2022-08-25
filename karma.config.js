@@ -68,7 +68,11 @@ module.exports = function(karma) {
                       chrome: '91'
                     }
                   } ]
-                ]
+                ],
+                plugins: coverage ?
+                  [ [ 'istanbul', { exclude: [
+                    'test/**/*'
+                  ] } ] ] : []
               }
             }
           },
@@ -76,17 +80,7 @@ module.exports = function(karma) {
             test: /\.(css|dmn)$/,
             use: 'raw-loader'
           }
-        ].concat(coverage ?
-          {
-            test: /\.js$/,
-            use: {
-              loader: 'istanbul-instrumenter-loader',
-              options: { esModules: true }
-            },
-            include: /lib\.*/,
-            exclude: /node_modules/
-          } : []
-        )
+        ]
       },
       resolve: {
         modules: [
