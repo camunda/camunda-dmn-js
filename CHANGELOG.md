@@ -6,6 +6,12 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.6.0
+
+* `DEPS`: update to `dmn-js@12.3.0` ([changelog](https://github.com/bpmn-io/dmn-js/blob/develop/packages/dmn-js/CHANGELOG.md#1230))
+* `DEPS`: update to `dmn-js-properties-panel@1.1.1` ([changelog](https://github.com/bpmn-io/dmn-js-properties-panel/blob/master/CHANGELOG.md#111))
+* `DEPS`: update to `diagram-js@8.9.0` ([changelog](https://github.com/bpmn-io/diagram-js/blob/master/CHANGELOG.md#890))
+
 ## 0.5.0
 
 * `DEPS`: update to `dmn-js@12.2.0` ([changelog](https://github.com/bpmn-io/dmn-js/blob/develop/packages/dmn-js/CHANGELOG.md#1220))
