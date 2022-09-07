@@ -6,6 +6,10 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.6.1
+
+* `CHORE`: remove unused properties-panel peer dependency ([#23](https://github.com/camunda/camunda-dmn-js/pull/23))
+
 ## 0.6.0
 
 * `DEPS`: update to `dmn-js@12.3.0` ([changelog](https://github.com/bpmn-io/dmn-js/blob/develop/packages/dmn-js/CHANGELOG.md#1230))
