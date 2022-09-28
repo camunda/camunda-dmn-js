@@ -69,7 +69,7 @@
     "chai": "^4.3.6",
     "cross-env": "^7.0.3",
     "dmn-js": "^13.0.0",
-    "dmn-js-properties-panel": "^1.1.1",
+    "dmn-js-properties-panel": "^1.2.0",
     "dmn-js-shared": "^12.3.0",
     "eslint": "^7.32.0",
     "eslint-plugin-bpmn-io": "^0.13.0",
