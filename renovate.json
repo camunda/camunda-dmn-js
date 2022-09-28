@@ -2,6 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "github>bpmn-io/renovate-config:recommended",
-    ":reviewer(modeling-dev)"
+    ":reviewer(bpmn-io/modeling-dev)"
   ]
 }
