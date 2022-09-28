@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 var execSync = require('execa').sync;
 
 var failures = 0;
