@@ -64,7 +64,7 @@
     "@rollup/plugin-replace": "^3.1.0",
     "@testing-library/dom": "^8.13.0",
     "babel-loader": "^8.2.5",
-    "babel-plugin-inferno": "~5.1.0",
+    "babel-plugin-inferno": "~6.5.0",
     "babel-plugin-istanbul": "^6.1.1",
     "chai": "^4.3.6",
     "cross-env": "^7.0.3",
