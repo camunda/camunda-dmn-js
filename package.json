@@ -74,7 +74,7 @@
     "eslint": "^8.24.0",
     "eslint-plugin-bpmn-io": "^0.16.0",
     "execa": "^5.1.1",
-    "inferno": "~5.6.2",
+    "inferno": "~8.0.0",
     "karma": "^6.3.19",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^3.1.1",
@@ -103,6 +103,6 @@
   "peerDependencies": {
     "dmn-js": "^13.0.0",
     "dmn-js-properties-panel": "^1.1.1",
-    "inferno": "5.6.x"
+    "inferno": "8.0.x"
   }
 }
