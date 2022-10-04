@@ -6,12 +6,14 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+* `DEPS`: update to `@bpmn-io/properties-panel@0.23.0`
+
 ## 0.7.0
 
 * `DEPS`: update to `diagram-js@9.9.0`
 * `DEPS`: update to `dmn-js@13.0.0`
 * `DEPS`: update to `dmn-js-properties-panel@1.2.1`
-* `DEPS`: update to `@bpmn-io/properties-panel@0.23.0`
+* `DEPS`: update to `@bpmn-io/properties-panel@0.22.0`
 * `DEPS`: update to `min-dash@4.0.0`
 * `DEPS`: update to `min-dom@4.0.0`
 
