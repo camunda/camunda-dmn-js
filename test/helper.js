@@ -88,10 +88,6 @@ body {
   display: flex;
 }
 
-.test-container:only-of-type {
-  height: calc(100vh -  42px);
-}
-
 .container {
   flex: 1;
   overflow: auto;

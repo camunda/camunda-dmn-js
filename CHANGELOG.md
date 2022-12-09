@@ -6,7 +6,13 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
-* `DEPS`: update to `@bpmn-io/properties-panel@0.23.0`
+## 0.8.0
+
+* `DEPS`: update to `dmn-js@14`
+* `DEPS`: update to `@bpmn-io/properties-panel@1`
+
+### Breaking Changes
+* New popup menu UI introduced with `diagram-js@11` / `dmn-js@14`. See [`diagram-js` breaking changes and migration guide](https://github.com/bpmn-io/diagram-js/blob/develop/CHANGELOG.md#breaking-changes).
 
 ## 0.7.0
 
