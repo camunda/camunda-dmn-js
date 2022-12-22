@@ -6,6 +6,10 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.8.1
+
+* `DEPS`: update to `dmn-js@14.0.2`
+
 ## 0.8.0
 
 * `DEPS`: update to `dmn-js@14`
