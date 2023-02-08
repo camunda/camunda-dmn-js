@@ -6,6 +6,16 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.9.0
+
+* `DEPS`: update to `diagram-js@11.9.0`
+* `DEPS`: update to `@bpmn-io/properties-panel@1.3.1`
+* `DEPS`: update to `dmn-js@14.1.0`
+
+### Key Changes in Modeling
+
+* `FEAT`: set decision table header as title
+
 ## 0.8.1
 
 * `DEPS`: update to `dmn-js@14.0.2`
