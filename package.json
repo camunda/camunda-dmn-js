@@ -62,7 +62,7 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^14.0.0",
     "@rollup/plugin-replace": "^4.0.0",
-    "@testing-library/dom": "^8.13.0",
+    "@testing-library/dom": "^9.0.0",
     "babel-loader": "^9.0.0",
     "babel-plugin-inferno": "~5.1.0",
     "babel-plugin-istanbul": "^6.1.1",
