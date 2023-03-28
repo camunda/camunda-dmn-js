@@ -12,7 +12,7 @@
     "lint": "eslint .",
     "dev": "npm test -- --auto-watch --no-single-run",
     "test": "karma start karma.config.js",
-    "distro": "rimraf dist && rollup -c",
+    "distro": "rimraf dist && rollup -c --bundleConfigAsCjs",
     "test:distro": "node tasks/test-distro.js",
     "start": "run-s start:base",
     "start:base": "cross-env SINGLE_START=base-modeler npm run dev",
