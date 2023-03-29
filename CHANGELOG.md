@@ -6,6 +6,10 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.10.0
+
+* `FEAT`: add grid ([#67](https://github.com/camunda/camunda-dmn-js/pull/67))
+
 ## 0.9.0
 
 * `DEPS`: update to `diagram-js@11.9.0`
