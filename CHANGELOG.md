@@ -9,6 +9,10 @@ ___Note:__ Yet to be released changes appear here._
 ## 0.10.0
 
 * `FEAT`: add grid ([#67](https://github.com/camunda/camunda-dmn-js/pull/67))
+* `DEPS`: update to `diagram-js@11.12.0`
+* `DEPS`: update to `dmn-js@14.1.1`
+* `DEPS`: update to `bpmn-io/properties-panel@1.7.0`
+* `DEPS`: update to `dmn-js-properties-panel@1.3.2`
 
 ## 0.9.0
 
