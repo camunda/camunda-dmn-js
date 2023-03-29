@@ -97,4 +97,55 @@ describe('BaseModeler', function() {
       expect(activeViewer.get('alignToOrigin', false)).not.to.exist;
     });
   });
+
+
+  describe('disableGrid', function() {
+
+    it('should NOT disable grid per default', async function() {
+
+      // given
+      const modeler = new Modeler({ container });
+
+      // when
+      await modeler.importXML(drdXML);
+
+      // then
+      const activeViewer = modeler.getActiveViewer();
+      expect(activeViewer.get('grid', false)).to.exist;
+    });
+
+
+    it('should disable grid when passed via `common`', async function() {
+
+      // given
+      const modeler = new Modeler({ container, common: {
+        disableGrid: true
+      } });
+
+      // when
+      await modeler.importXML(drdXML);
+
+      // then
+      const activeViewer = modeler.getActiveViewer();
+      expect(activeViewer.get('grid', false)).not.to.exist;
+    });
+
+
+    it('should disable grid when passed via `drd`', async function() {
+
+      // given
+      const modeler = new Modeler({ container, drd: {
+        disableGrid: true
+      } });
+
+      // when
+      await modeler.importXML(drdXML);
+
+      // then
+      const activeViewer = modeler.getActiveViewer();
+      expect(activeViewer.get('grid', false)).not.to.exist;
+    });
+
+  });
+
 });
