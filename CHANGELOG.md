@@ -6,6 +6,15 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.10.1
+
+* `DEPS`: update to `diagram-js@12`
+* `DEPS`: update to `dmn-js@14.1.5`
+
+### Key Changes in Modeling
+
+* `FIX`: fix crashes when `typeRef` is not defined
+
 ## 0.10.0
 
 * `FEAT`: add grid ([#67](https://github.com/camunda/camunda-dmn-js/pull/67))
