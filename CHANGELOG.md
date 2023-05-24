@@ -6,6 +6,14 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 1.0.0
+
+* `DEPS`: bump to `dmn-js-properties-panel@2`
+
+### Breaking Changes
+
+* Properties panel open state no longer handled within the panel.
+
 ## 0.10.1
 
 * `DEPS`: update to `diagram-js@12`
