@@ -12,7 +12,8 @@ ___Note:__ Yet to be released changes appear here._
 
 ### Key Changes in Modeling
 
-* `FEAT`: use FEEL editor in decision table
+* `FEAT`: use FEEL editor in decision table cell editor ([bpmn-io/dmn-js#774](https://github.com/bpmn-io/dmn-js/issues/774))
+* `FEAT`: use FEEL editor in decision table input expression ([bpmn-io/dmn-js#768](https://github.com/bpmn-io/dmn-js/issues/768))
 
 ## 1.1.0
 
