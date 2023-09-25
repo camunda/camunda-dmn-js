@@ -6,6 +6,15 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 1.2.1
+
+* `DEPS`: update to `dmn-js@14.3.1`
+
+### Key Changes in Modeling
+
+* `FIX`: display FEEL autocomplete in correct position
+* `FIX`: increase decision table cell editor line height
+
 ## 1.2.0
 
 * `DEPS`: update to `dmn-js@14.3.0`
