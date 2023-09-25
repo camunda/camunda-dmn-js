@@ -6,6 +6,14 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 1.2.0
+
+* `DEPS`: update to `dmn-js@14.3.0`
+
+### Key Changes in Modeling
+
+* `FEAT`: use FEEL editor in decision table
+
 ## 1.1.0
 
 * `DEPS`: bump to `dmn-js-properties-panel@3`
