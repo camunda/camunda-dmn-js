@@ -6,6 +6,14 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 1.3.2
+
+* `DEPS`: update to `dmn-js@14.4.2`
+
+### Key Changes in Modeling
+
+* `FIX`: display literal expression autocomplete in correct position
+
 ## 1.3.1
 
 * `DEPS`: update to `dmn-js@14.4.1`
