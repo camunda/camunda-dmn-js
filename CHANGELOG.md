@@ -6,6 +6,14 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 1.3.3
+
+* `DEPS`: update to `dmn-js@14.4.3`
+
+### Key Changes in Modeling
+
+* `FIX`: make FEEL editor in literal expression save value ([dmn-js#786](https://github.com/bpmn-io/dmn-js/issues/786))
+
 ## 1.3.2
 
 * `DEPS`: update to `dmn-js@14.4.2`
