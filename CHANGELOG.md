@@ -6,6 +6,15 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 1.4.0
+
+* `DEPS`: update to `dmn-js@14.5.0`
+* `DEPS`: update to `diagram-js@12.5.0`
+
+### Key Changes in Modeling
+
+* `FEAT`: implement variable suggestions ([dmn-js#785](https://github.com/bpmn-io/dmn-js/issues/785))
+
 ## 1.3.3
 
 * `DEPS`: update to `dmn-js@14.4.3`
