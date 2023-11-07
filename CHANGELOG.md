@@ -6,6 +6,18 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 1.5.0
+
+* `DEPS`: update to `dmn-js@14.7.0`
+* `DEPS`: update to `diagram-js@12.7.2`
+
+### Key Changes in Modeling
+
+* `FEAT`: adjust selection outline to shapes ([dmn-js#799](https://github.com/bpmn-io/dmn-js/issues/799))
+* `FEAT`: implement search in DRD ([dmn-js#792](https://github.com/bpmn-io/dmn-js/pull/792))
+* `FIX`: make literal expression box grow with content ([dmn-js#789](https://github.com/bpmn-io/dmn-js/issues/789))
+* `FIX`: add missing translations ([dmn-js#793](https://github.com/bpmn-io/dmn-js/issues/793))
+
 ## 1.4.0
 
 * `DEPS`: update to `dmn-js@14.5.0`
