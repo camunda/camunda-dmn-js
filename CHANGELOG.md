@@ -6,6 +6,14 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 1.7.0
+
+* `DEPS`: update to `dmn-js@14.7.1`
+
+### Key Changes in Modeling
+
+* `FEAT`: provide element ID in variable suggestions ([#83](https://github.com/camunda/camunda-dmn-js/issues/83))
+
 ## 1.6.0
 
 * `DEPS`: update to `dmn-js-properties-panel@3.2.1`
