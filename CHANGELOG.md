@@ -6,6 +6,15 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 1.6.0
+
+* `DEPS`: update to `dmn-js-properties-panel@3.2.1`
+* `DEPS`: update to `diagram-js@12.8.0`
+
+### Key Changes in Propertie Panel
+
+* `FEAT`: support documentation fields ([dmn-js-properties-panel#62](https://github.com/bpmn-io/dmn-js-properties-panel/issues/62))
+
 ## 1.5.0
 
 * `DEPS`: update to `dmn-js@14.7.0`
