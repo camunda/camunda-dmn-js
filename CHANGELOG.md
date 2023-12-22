@@ -6,6 +6,18 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 1.8.0
+
+* `DEPS`: update to `diagram-js@13.4.0`
+* `DEPS`: update to `dmn-js@15.0.0`
+
+### Key Changes in Modeling
+
+* `FEAT`: make drilldown buttons navigable via keyboard ([bpmn-io/dmn-js#778](https://github.com/bpmn-io/dmn-js/issues/778))
+* `FEAT`: adjust titles and labels ([bpmn-io/dmn-js#801](https://github.com/bpmn-io/dmn-js/issues/801))
+* `FEAT`: allow non-searchable entries in popup menu ([bpmn-io/diagram-js#835](https://github.com/bpmn-io/diagram-js/pull/835))
+* `FIX`: reposition popup menu if it opens above the viewport ([bpmn-io/diagram-js#829](https://github.com/bpmn-io/diagram-js/pull/829))
+
 ## 1.7.0
 
 * `DEPS`: update to `dmn-js@14.7.1`
