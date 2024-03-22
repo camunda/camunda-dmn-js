@@ -6,6 +6,16 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.0.0
+
+* `DEPS`: update to `dmn-js-properties-panel@3.3.0`
+* `DEPS`: update to `diagram-js@14.3.0`
+* `DEPS`: update to `dmn-js@16.0.1`
+
+### Breaking Changes
+
+* Migrated to `diagram-js@14` / `bpmn-js@17` which removes touch interaction module, and dependency on unsupported `hammerjs` package. If you rely on touch interaction, you need to support touch interaction on your own.
+
 ## 1.8.0
 
 * `DEPS`: update to `diagram-js@13.4.0`
