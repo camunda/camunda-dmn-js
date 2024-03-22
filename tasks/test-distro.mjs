@@ -2,8 +2,35 @@
 
 import { execaSync as execSync } from 'execa';
 
+import { existsSync } from 'node:fs';
 
 var failures = 0;
+
+function verifyAssets() {
+  const assetPaths = [
+    'dist/assets/diagram-js.css',
+    'dist/assets/dmn-js-decision-table-controls.css',
+    'dist/assets/dmn-js-decision-table.css',
+    'dist/assets/dmn-js-drd.css',
+    'dist/assets/dmn-js-literal-expression.css',
+    'dist/assets/dmn-js-shared.css',
+    'dist/assets/dmn-font/css/dmn.css',
+    'dist/assets/properties-panel.css',
+    'dist/assets/overview.css',
+    'dist/assets/base-modeler.css',
+    'dist/assets/camunda-cloud-modeler.css',
+    'dist/assets/camunda-platform-modeler.css'
+  ];
+
+  for (const assetPath of assetPaths) {
+
+    if (!existsSync(assetPath)) {
+      console.error(`expected file <${assetPath}> does not exist!`);
+
+      failures++;
+    }
+  }
+}
 
 function runTest(variant, env) {
 
@@ -28,6 +55,8 @@ function runTest(variant, env) {
 }
 
 function test() {
+
+  verifyAssets();
 
   runTest('base-modeler', 'development');
   runTest('base-modeler', 'production');
