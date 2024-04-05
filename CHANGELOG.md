@@ -6,6 +6,17 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.2.0
+
+* `DEPS`: update to `dmn-js@16.1.0`
+
+### Key Changes in Modeling
+
+* `FEAT`: allow to provide accessible names to form fields ([bpmn-io/dmn-js#843](https://github.com/bpmn-io/dmn-js/pull/843))
+* `FIX`: add accessible names to multiple components ([bpmn-io/dmn-js#843](https://github.com/bpmn-io/dmn-js/pull/843))
+* `FIX`: improve contrast
+* `FIX`: make table cells visible to screen readers ([bpmn-io/dmn-js#821](https://github.com/bpmn-io/dmn-js/issue/821))
+
 ## 2.1.0
 
 * `DEPS`: update to `dmn-js@16.0.2`
