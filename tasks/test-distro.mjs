@@ -24,8 +24,10 @@ function verifyAssets() {
 
   for (const assetPath of assetPaths) {
 
+    console.error('[TEST] ASSET ' + assetPath);
+
     if (!existsSync(assetPath)) {
-      console.error(`expected file <${assetPath}> does not exist!`);
+      console.error(`[TEST] FAILURE <${assetPath}> does not exist!`);
 
       failures++;
     }
@@ -56,8 +58,6 @@ function runTest(variant, env) {
 
 function test() {
 
-  verifyAssets();
-
   runTest('base-modeler', 'development');
   runTest('base-modeler', 'production');
 
@@ -66,6 +66,8 @@ function test() {
 
   runTest('camunda-platform-modeler', 'development');
   runTest('camunda-platform-modeler', 'production');
+
+  verifyAssets();
 
   if (failures) {
     process.exit(1);
