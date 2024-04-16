@@ -133,8 +133,8 @@ function copyStyles(styles) {
   return copy({
     targets: styles.map(function(sheet) {
       return {
-        src: sheet.src,
-        dest: sheet.dest
+        src: sheet.src.replace(/\\/g, '/'),
+        dest: sheet.dest.replace(/\\/g, '/')
       };
     })
   });
