@@ -5,5 +5,7 @@
 @import './dmn-js-decision-table.css';
 @import './dmn-js-drd.css';
 @import './dmn-js-literal-expression.css';
+@import './dmn-js-boxed-expression-controls.css';
+@import './dmn-js-boxed-expression.css';
 @import './dmn-js-shared.css';
 @import './properties-panel.css';

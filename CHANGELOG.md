@@ -6,6 +6,18 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.3.0
+
+* `DEPS`: update to `dmn-js@16.3.0`
+* `DEPS`: update to `diagram-js@14.5.2`
+
+### Key Changes in Modeling
+
+* `FEAT`: context pad position absolute instead of relative to element ([bpmn-io/diagram-js#888](https://github.com/bpmn-io/diagram-js/pull/888))
+* `FEAT`: do not scale context pad and popup menu by default ([bpmn-io/diagram-js#883](https://github.com/bpmn-io/diagram-js/pull/883))
+* `FEAT`: add support for implementing BKM as literal expression ([bpmn-io/dmn-js#704](https://github.com/bpmn-io/dmn-js/issues/704), [bpmn-io/dmn-js#826](https://github.com/bpmn-io/dmn-js/issues/826))
+* `FEAT`: remove background for DRGElements ([bpmn-io/dmn-js#855](https://github.com/bpmn-io/dmn-js/pull/855))
+
 ## 2.2.0
 
 * `DEPS`: update to `dmn-js@16.1.0`

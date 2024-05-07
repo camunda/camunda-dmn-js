@@ -119,6 +119,8 @@ body {
     { name: 'dmn-js-decision-table.css', css: require('dmn-js/dist/assets/dmn-js-decision-table.css').default },
     { name: 'dmn-js-drd.css', css: require('dmn-js/dist/assets/dmn-js-drd.css').default },
     { name: 'dmn-js-literal-expression.css', css: require('dmn-js/dist/assets/dmn-js-literal-expression.css').default },
+    { name: 'dmn-js-boxed-expression-controls.css', css: require('dmn-js/dist/assets/dmn-js-boxed-expression-controls.css').default },
+    { name: 'dmn-js-boxed-expression.css', css: require('dmn-js/dist/assets/dmn-js-boxed-expression.css').default },
     { name: 'dmn-js-shared.css', css: require('dmn-js/dist/assets/dmn-js-shared.css').default },
     { name: 'properties-panel.css', css: require('dmn-js-properties-panel/dist/assets/properties-panel.css').default },
     { name: 'overview.css', css: require('../styles/overview.css').default }
