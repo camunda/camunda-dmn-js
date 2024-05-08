@@ -7,6 +7,7 @@ import {
 } from '../helper';
 
 import diagramXML from '../fixtures/simple.dmn';
+import bkmXML from '../fixtures/function-definition.dmn';
 
 
 const singleStart = window.__env__ && window.__env__.SINGLE_START === 'camunda-platform-modeler';
@@ -49,6 +50,46 @@ describe('CamundaPlatformModeler', function() {
 
       // then
       expect(warnings).to.be.empty;
+    });
+
+
+    describe('additional modules', function() {
+
+      it('should pass additional modules to boxed expression', async function() {
+
+        // given
+        const modeler = new Modeler({ container,
+          common: {
+            propertiesPanel: {
+              parent: propertiesContainer
+            },
+            overview: {
+              parent: overviewContainer
+            }
+          },
+          boxedExpression: {
+            additionalModules: [
+              {
+                foo: [ 'type', function() {
+                  return {
+                    name: 'foo'
+                  };
+                } ]
+              }
+            ]
+          }
+        });
+
+        // when
+        await modeler.importXML(bkmXML);
+
+        // then
+        const viewer = modeler.getActiveViewer();
+        const foo = viewer.get('foo');
+
+        expect(foo).to.exist;
+        expect(foo.name).to.equal('foo');
+      });
     });
   });
 
