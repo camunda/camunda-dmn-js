@@ -6,6 +6,11 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.3.2
+
+* `DEPS`: update to `dmn-js@16.3.1`
+* `DEPS`: update to `diagram-js@14.5.3`
+
 ## 2.3.1
 
 * `FIX`: correctly pass boxed expression extensions
