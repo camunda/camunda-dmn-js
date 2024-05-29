@@ -6,6 +6,19 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.4.0
+
+* `DEPS`: update to `dmn-js@16.4.0`
+* `DEPS`: update to `diagram-js@14.7.1`
+
+### Key Changes in Modeling
+
+* `FEAT`: autocomplete BKMs as snippets ([bpmn-io/dmn-js#785](https://github.com/bpmn-io/dmn-js/issues/785), [bpmn-io/dmn-js#827](https://github.com/bpmn-io/dmn-js/issues/827))
+* `FEAT`: make inputs commit on blur, and let browser handle undo/redo ([bpmn-io/dmn-js#859](https://github.com/bpmn-io/dmn-js/issues/859))
+* `FIX`: show FEEL expressions with line wrapping ([bpmn-io/dmn-js#838](https://github.com/bpmn-io/dmn-js/issues/838))
+* `FIX`: make add column buttons keyboard-accessible ([bpmn-io/dmn-js#847](https://github.com/bpmn-io/dmn-js/issues/847))
+* `FIX`: make add row button keyboard-accessible ([bpmn-io/dmn-js#846](https://github.com/bpmn-io/dmn-js/issues/846))
+
 ## 2.3.3
 
 * `DEPS`: update to `dmn-js@16.3.2`
