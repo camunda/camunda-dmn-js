@@ -9,7 +9,7 @@ ___Note:__ Yet to be released changes appear here._
 ## 2.5.0
 
 * `DEPS`: update to `dmn-js@16.5.0`
-* `DEPS`: update to `dmn-js-properties-panel@3.3.1`
+* `DEPS`: update to `dmn-js-properties-panel@3.3.2`
 * `DEPS`: update to `min-dash@4.2.1`
 
 ### Key Changes in Modeling
