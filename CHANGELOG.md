@@ -6,6 +6,20 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.5.0
+
+* `DEPS`: update to `dmn-js@16.5.0`
+* `DEPS`: update to `dmn-js-properties-panel@3.3.1`
+* `DEPS`: update to `min-dash@4.2.1`
+
+### Key Changes in Modeling
+
+* `FEAT`: add edit input/output button ([bpmn-io/dmn-js#845](https://github.com/bpmn-io/dmn-js/issues/845))
+
+### Key Changes in Properties Panel
+
+* `FIX`: keep missing ID error ([bpmn-io/dmn-js-properties-panel#85](https://github.com/bpmn-io/dmn-js-properties-panel/issues/85))
+
 ## 2.4.0
 
 * `DEPS`: update to `dmn-js@16.4.0`
@@ -96,7 +110,7 @@ ___Note:__ Yet to be released changes appear here._
 * `DEPS`: update to `dmn-js-properties-panel@3.2.1`
 * `DEPS`: update to `diagram-js@12.8.0`
 
-### Key Changes in Propertie Panel
+### Key Changes in Properties Panel
 
 * `FEAT`: support documentation fields ([dmn-js-properties-panel#62](https://github.com/bpmn-io/dmn-js-properties-panel/issues/62))
 
