@@ -6,6 +6,10 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.6.0
+
+* `DEPS`: update to `dmn-js-properties-panel@3.4.0`
+
 ## 2.5.0
 
 * `DEPS`: update to `dmn-js@16.5.0`
