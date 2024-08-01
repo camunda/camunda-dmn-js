@@ -6,6 +6,23 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+
+## 2.7.0
+
+* `DEPS`: update to `dmn-js@16.6.1`
+* `DEPS`: update to `dmn-js-properties-panel@3.4.1`
+* `DEPS`: update to `diagram-js@14.8.0`
+
+### Key Changes in Modeling
+
+* `FEAT`: add `Modeling#updateModdleProperties` ([bpmn-io/dmn-js#886](https://github.com/bpmn-io/dmn-js/pull/886))
+* `FIX`: make it work in web components ([bpmn-io/dmn-js#631](https://github.com/bpmn-io/dmn-js/issues/631))
+* `FIX`: remove incorrect attribute in popup menu item ([bpmn-io/diagram-js#918](https://github.com/bpmn-io/diagram-js/pull/918))
+
+### Key Changes in Properties Panel
+
+* `FIX`: make name field a text area ([bpmn-io/dmn-js-properties-panel#94](https://github.com/bpmn-io/dmn-js-properties-panel/issues/94))
+
 ## 2.6.0
 
 * `DEPS`: update to `dmn-js-properties-panel@3.4.0`
