@@ -10,7 +10,21 @@ describe('CamundaVariableProvider', function() {
     beforeEach(bootstrapBaseModeler(diagramXML));
 
 
-    it('should provide input data id as name', inject(function(variableResolver, elementRegistry) {
+    it('should provide decision as ID', inject(function(variableResolver, _parent) {
+
+      // given
+      const requiringDecision = _parent.getDefinitions().get('drgElement').find(e => e.id === 'decision_2');
+
+      // when
+      const variables = variableResolver.getVariables(requiringDecision);
+
+      // then
+      expect(variables).to.have.length(1);
+      expect(variables[0]).to.have.property('name', 'decision');
+    }));
+
+
+    it('should provide input data as name', inject(function(variableResolver, elementRegistry) {
 
       // given
       const inputEntry = elementRegistry.get('inputEntry1').businessObject;
@@ -20,8 +34,24 @@ describe('CamundaVariableProvider', function() {
 
       // then
       expect(variables).to.have.length(1);
-      expect(variables[0]).to.have.property('name', 'InputData_status');
+      expect(variables[0]).to.have.property('name', 'status');
     }));
+
+
+    it('should provide BKM as name', inject(
+      function(variableResolver, _parent) {
+
+        // given
+        const requiringBkm = _parent.getDefinitions().get('drgElement').find(e => e.id === 'Bkm_1');
+
+        // when
+        const variables = variableResolver.getVariables(requiringBkm);
+
+        // then
+        expect(variables).to.have.length(1);
+        expect(variables[0]).to.have.property('name', 'Business Knowledge Model 2');
+      })
+    );
   });
 
 
