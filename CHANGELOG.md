@@ -6,6 +6,7 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+* `FIX`: provide BKM and Input Data name in variable suggestions ([#117](https://github.com/camunda/camunda-dmn-js/issues/117))
 
 ## 2.7.0
 

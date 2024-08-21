@@ -78,4 +78,37 @@
       </rule>
     </decisionTable>
   </decision>
+  <businessKnowledgeModel name="Business Knowledge Model 1" id="Bkm_1">
+    <encapsulatedLogic>
+      <formalParameter name="noType" />
+      <formalParameter name="string" typeRef="string" />
+      <formalParameter name="num" typeRef="number" />
+      <literalExpression>
+        <text>noType + num - string</text>
+      </literalExpression>
+    </encapsulatedLogic>
+    <knowledgeRequirement>
+      <requiredKnowledge href="#Bkm_2" />
+    </knowledgeRequirement>
+  </businessKnowledgeModel>
+  <businessKnowledgeModel name="Business Knowledge Model 2" id="Bkm_2">
+    <encapsulatedLogic>
+      <formalParameter name="noType" />
+      <formalParameter name="string" typeRef="string" />
+      <formalParameter name="num" typeRef="number" />
+      <literalExpression>
+        <text>noType + num - string</text>
+      </literalExpression>
+    </encapsulatedLogic>
+  </businessKnowledgeModel>
+  <decision id="decision_2" name="Approve order">
+    <informationRequirement>
+      <requiredDecision href="#decision" />
+    </informationRequirement>
+    <literalExpression>
+      <text>
+        Check Order.result = "ok"
+      </text>
+    </literalExpression>
+  </decision>
 </definitions>
