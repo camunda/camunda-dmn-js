@@ -51,6 +51,31 @@ describe('BaseModeler', function() {
   });
 
 
+  it('should open each view', async function() {
+
+    // given
+    const modeler = new Modeler({ container, common: {
+      propertiesPanel: {
+        parent: propertiesContainer
+      },
+      overview: {
+        parent: overviewContainer
+      }
+    } });
+    await modeler.importXML(diagramXML);
+    const views = modeler.getViews();
+
+    for (const view of views) {
+
+      // when
+      await modeler.open(view);
+
+      // then
+      expect(modeler.getActiveView()).to.eql(view);
+    }
+  });
+
+
   describe('additional modules', function() {
 
     it('should pass additional modules to boxed expression', async function() {
