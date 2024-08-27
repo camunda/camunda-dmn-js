@@ -72,5 +72,101 @@ describe('CamundaCloudModeler', function() {
         expect(modeler.getActiveView()).to.eql(view);
       }
     });
+
+
+    it('should inject mandatory modules', async function() {
+
+      // when
+      const modeler = new Modeler({
+        container,
+        common: {
+          propertiesPanel: {
+            parent: propertiesContainer
+          },
+          overview: {
+            parent: overviewContainer
+          }
+        }
+      });
+
+      await modeler.importXML(diagramXML);
+
+      await modeler.open(modeler.getViews().find(({ type }) => type === 'drd'));
+
+      // assume
+      expect(modeler.getActiveView().type).to.eql('drd');
+
+      const viewer = modeler.getActiveViewer();
+
+      // then
+      expect(viewer.get('propertiesPanel')).to.exist;
+      expect(viewer.get('zeebePropertiesProvider')).to.exist;
+    });
+
+
+    it('should inject zeebe moddle descriptors', async function() {
+
+      // when
+      const modeler = new Modeler({
+        container,
+        common: {
+          propertiesPanel: {
+            parent: propertiesContainer
+          },
+          overview: {
+            parent: overviewContainer
+          }
+        }
+      });
+
+      await modeler.importXML(diagramXML);
+
+      await modeler.open(modeler.getViews().find(({ type }) => type === 'drd'));
+
+      // assume
+      expect(modeler.getActiveView().type).to.eql('drd');
+
+      const viewer = modeler.getActiveViewer();
+
+      // when
+      const moddle = viewer.get('moddle');
+
+      // then
+      expect(moddle.getPackage('zeebe')).to.exist;
+    });
+
+
+    it('should inject tooltipContextProvider', async function() {
+
+      // when
+      const modeler = new Modeler({
+        container,
+        common: {
+          propertiesPanel: {
+            parent: propertiesContainer
+          },
+          overview: {
+            parent: overviewContainer
+          }
+        }
+      });
+
+      await modeler.importXML(diagramXML);
+
+      await modeler.open(modeler.getViews().find(({ type }) => type === 'drd'));
+
+      // assume
+      expect(modeler.getActiveView().type).to.eql('drd');
+
+      const viewer = modeler.getActiveViewer();
+
+      // when
+      const propertiesPanel = viewer.get('propertiesPanel');
+
+      // then
+      expect(propertiesPanel._tooltipConfig).to.exist;
+    });
+
   });
+
 });
