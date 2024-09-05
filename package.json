@@ -47,11 +47,11 @@
   "dependencies": {
     "@bpmn-io/align-to-origin": "^0.7.0",
     "camunda-dmn-moddle": "^1.3.0",
-    "diagram-js": "^14.8.0",
+    "diagram-js": "^14.9.0",
     "diagram-js-grid": "^1.0.0",
     "diagram-js-origin": "^1.3.4",
-    "dmn-js": "^16.6.1",
-    "dmn-js-drd": "^16.6.1",
+    "dmn-js": "^16.7.0",
+    "dmn-js-drd": "^16.7.0",
     "min-dash": "^4.2.1",
     "zeebe-dmn-moddle": "^1.0.0"
   },
@@ -73,7 +73,7 @@
     "chai": "^4.3.6",
     "cross-env": "^7.0.3",
     "dmn-js-properties-panel": "^3.5.2",
-    "dmn-js-shared": "^16.6.1",
+    "dmn-js-shared": "^16.7.0",
     "eslint": "^8.44.0",
     "eslint-plugin-bpmn-io": "^1.0.0",
     "execa": "^8.0.0",
