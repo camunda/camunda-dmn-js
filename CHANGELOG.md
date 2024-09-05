@@ -6,6 +6,11 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.9.0
+
+* `FEAT`: lint first item access ([bpmn-io/feel-lint#25](https://github.com/bpmn-io/feel-lint/issues/25))
+* `FEAT`: decision table context menu keyboard navigation ([bpmn-io/dmn-js#848](https://github.com/bpmn-io/dmn-js/issues/848))
+
 ## 2.8.1
 
 * `FIX`: include Zeebe properties provider and model extension ([#121](https://github.com/camunda/camunda-dmn-js/pull/121))
