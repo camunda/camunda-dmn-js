@@ -6,6 +6,11 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.9.1
+
+* `FIX`: make literal expression focus hitbox larger ([camunda/camunda-modeler#4342](https://github.com/camunda/camunda-modeler/issues/4342))
+* `DEPS`: update to `dmn-js@16.7.1`
+
 ## 2.9.0
 
 * `FEAT`: lint first item access ([bpmn-io/feel-lint#25](https://github.com/bpmn-io/feel-lint/issues/25))
