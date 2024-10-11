@@ -1,5 +1,3 @@
-/* eslint-env node */
-
 import { execaSync as execSync } from 'execa';
 
 import { existsSync } from 'node:fs';

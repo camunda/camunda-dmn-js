@@ -142,8 +142,6 @@ describe('camunda-platform/simple-date-edit', function() {
 
       // then
       expect(inputEntry7.businessObject.text).to
-
-        // eslint-disable-next-line
         .equal('[date and time("2018-01-25T00:00:00")..date and time("2000-01-01T00:00:00")]');
     }));
 
@@ -162,8 +160,6 @@ describe('camunda-platform/simple-date-edit', function() {
 
       // then
       expect(inputEntry7.businessObject.text).to
-
-        // eslint-disable-next-line
         .equal('[date and time("2018-01-25T00:00:00")..date and time("2018-01-25T23:59:59")]');
     }));
 
@@ -182,8 +178,6 @@ describe('camunda-platform/simple-date-edit', function() {
 
       // then
       expect(inputEntry7.businessObject.text).to
-
-        // eslint-disable-next-line
         .equal(`[date and time("2018-01-25T00:00:00")..date and time("${ getSampleDate() }")]`);
     }));
 
@@ -220,7 +214,7 @@ describe('camunda-platform/simple-date-edit', function() {
         // expect not to have been set yet
         expect(inputEntry8.businessObject.text).to
 
-          // eslint-disable-next-line
+
           .equal(`[date and time("${ getSampleDate() }")..date and time("${ getSampleDate() }")]`);
       }));
 
