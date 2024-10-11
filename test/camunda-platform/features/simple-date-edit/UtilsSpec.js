@@ -96,7 +96,7 @@ describe('camunda-platform/simple-date-edit - utils', function() {
       date: '2000-01-01T12:00:00'
     }));
 
-    // eslint-disable-next-line
+
     it('between', expectParsed('[date and time("2000-01-01T12:00:00")..date and time("2000-01-02T12:00:00")]', {
       type: 'between',
       dates: [ '2000-01-01T12:00:00', '2000-01-02T12:00:00' ]
