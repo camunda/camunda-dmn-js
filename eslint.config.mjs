@@ -1,41 +1,59 @@
 import bpmnIoPlugin from 'eslint-plugin-bpmn-io';
 
+const files = {
+  ignored: [
+    'dist'
+  ],
+  build: [
+    '*.js',
+    'tasks/**/*.mjs'
+  ],
+  test: [
+    'test/**/*.js'
+  ]
+};
+
 export default [
   {
-    ignores: [
-      'dist'
-    ]
+    ignores: files.ignored
   },
-  ...bpmnIoPlugin.configs.browser,
-  ...bpmnIoPlugin.configs.jsx,
+
+  // build
   ...bpmnIoPlugin.configs.node.map(config => {
     return {
       ...config,
-      files: [
-        'karma.config.js',
-        'karma.distro.js',
-        'rollup.config.js',
-        'tasks/**/*.mjs',
-        '**/test/**/*.js'
-      ]
+      files: files.build
     };
   }),
+
+  // lib + test
+  ...bpmnIoPlugin.configs.browser.map(config => {
+    return {
+      ...config,
+      ignores: files.build
+    };
+  }),
+  ...bpmnIoPlugin.configs.jsx.map(config => {
+    return {
+      ...config,
+      ignores: files.build
+    };
+  }),
+
+  // test
   ...bpmnIoPlugin.configs.mocha.map(config => {
     return {
       ...config,
-      files: [
-        '**/test/**/*.js'
-      ]
+      files: files.test
     };
   }),
   {
     languageOptions: {
       globals: {
-        sinon: true
+        sinon: true,
+        require: true
       },
     },
-    files: [
-      '**/test/**/*.js'
-    ]
+    files: files.test
   }
 ];
