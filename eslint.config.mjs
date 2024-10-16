@@ -1,15 +1,15 @@
 import bpmnIoPlugin from 'eslint-plugin-bpmn-io';
 
 const files = {
-  ignored: [
-    'dist'
-  ],
   build: [
     '*.js',
     'tasks/**/*.mjs'
   ],
   test: [
     'test/**/*.js'
+  ],
+  ignored: [
+    'dist'
   ]
 };
 
