@@ -6,6 +6,19 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 2.10.0
+
+* `DEPS`: update to `dmn-js@16.8.1`
+
+### Key Changes in Modeling
+
+* `FEAT`: support Camunda 8 FEEL built-ins ([bpmn-io/feel-editor#62](https://github.com/bpmn-io/feel-editor/pull/62))
+* `FIX`: display parameterless functions suggestion correctly ([bpmn-io/dmn-js#898](https://github.com/bpmn-io/dmn-js/issues/898))
+* `FIX`: improve validation of `first-item` FEEL rule ([#894](https://github.com/bpmn-io/dmn-js/issues/894))
+* `FIX`: variable name changes when element name\label changes ([bpmn-io/dmn-js#863](https://github.com/bpmn-io/dmn-js/issues/863))
+* `FIX`: make literal expression editor hitbox bigger in BKM ([camunda/camunda-modeler#4545](https://github.com/camunda/camunda-modeler/issues/4545))
+* `FIX`: make literal expression variables table styles explicit ([camunda/camunda-modeler#4550](https://github.com/camunda/camunda-modeler/issues/4550))
+
 ## 2.9.1
 
 * `FIX`: make literal expression focus hitbox larger ([camunda/camunda-modeler#4342](https://github.com/camunda/camunda-modeler/issues/4342))
