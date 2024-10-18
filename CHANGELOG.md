@@ -78,7 +78,7 @@ ___Note:__ Yet to be released changes appear here._
 
 ## 2.4.0
 
--
+* `DEPS`: update to `dmn-js@16.4.0`
 * `DEPS`: update to `diagram-js@14.7.1`
 
 ### Key Changes in Modeling
