@@ -11,6 +11,15 @@ ___Note:__ Yet to be released changes appear here._
 * `DEPS`: update to `dmn-js@17.0.0`
 * `DEPS`: update to `dmn-js-properties-panel@3.6.0`
 
+### Key Changes in Modeling
+
+* `FEAT`: DRD editor `Canvas` is now a focusable element ([bpmn-io/diagram-js#662](https://github.com/bpmn-io/diagram-js/pull/662))
+* `FEAT`: keyboard binds implicitly ([bpmn-io/diagram-js#662](https://github.com/bpmn-io/diagram-js/pull/662))
+
+### Breaking Changes
+
+* Keyboard is now implicit, and canvas is focusable, cf. [bpmn-io/diagram-js#662](https://github.com/bpmn-io/diagram-js/pull/662))
+
 ## 2.10.2
 
 * `DEPS`: update to `dmn-js@16.8.2`
