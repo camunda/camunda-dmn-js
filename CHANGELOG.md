@@ -6,8 +6,10 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
-* `DEPS`: bump to `dmn-js@17.0.0`
-* `DEPS`: bump to `dmn-js-properties-panel@3.6.0`
+* `DEPS`: update to `diagram-js-grid@1.1.0`
+* `DEPS`: update to `diagram-js@15.2.0`
+* `DEPS`: update to `dmn-js@17.0.0`
+* `DEPS`: update to `dmn-js-properties-panel@3.6.0`
 
 ## 2.10.2
 
