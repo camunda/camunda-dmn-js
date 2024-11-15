@@ -6,6 +6,20 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+* `DEPS`: update to `diagram-js-grid@1.1.0`
+* `DEPS`: update to `diagram-js@15.2.1`
+* `DEPS`: update to `dmn-js@17.0.3`
+* `DEPS`: update to `dmn-js-properties-panel@3.6.0`
+
+### Key Changes in Modeling
+
+* `FEAT`: DRD editor `Canvas` is now a focusable element ([bpmn-io/diagram-js#662](https://github.com/bpmn-io/diagram-js/pull/662))
+* `FEAT`: keyboard binds implicitly ([bpmn-io/diagram-js#662](https://github.com/bpmn-io/diagram-js/pull/662))
+
+### Breaking Changes
+
+* Keyboard is now bound implicitly, and canvas is focusable. Using `bindTo` configuration or calling `keyboard.bind` API with `node` parameter specified now results in a console error and has no effect, cf. ([bpmn-io/diagram-js#662](https://github.com/bpmn-io/diagram-js/pull/662)). 
+
 ## 2.10.2
 
 * `DEPS`: update to `dmn-js@16.8.2`

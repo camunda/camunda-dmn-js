@@ -33,9 +33,6 @@ export function bootstrapDmnJS(Modeler, diagram, options = {}) {
       container: container,
       ...options,
       common: {
-        keyboard: {
-          bindTo: document
-        },
         propertiesPanel: {
           parent: propertiesContainer
         },
