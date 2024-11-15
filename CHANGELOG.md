@@ -18,7 +18,7 @@ ___Note:__ Yet to be released changes appear here._
 
 ### Breaking Changes
 
-* Keyboard is now implicit, and canvas is focusable, cf. [bpmn-io/diagram-js#662](https://github.com/bpmn-io/diagram-js/pull/662))
+* Keyboard is now bound implicitly, and canvas is focusable. Using `bindTo` configuration or calling `keyboard.bind` API with `node` parameter specified now results in a console error and has no effect, cf. ([bpmn-io/diagram-js#662](https://github.com/bpmn-io/diagram-js/pull/662)). 
 
 ## 2.10.2
 
