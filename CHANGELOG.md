@@ -17,6 +17,9 @@ ___Note:__ Yet to be released changes appear here._
 
 * `FEAT`: DRD editor `Canvas` is now a focusable element ([bpmn-io/diagram-js#662](https://github.com/bpmn-io/diagram-js/pull/662))
 * `FEAT`: keyboard binds implicitly ([bpmn-io/diagram-js#662](https://github.com/bpmn-io/diagram-js/pull/662))
+* `FEAT`: suggest latest Camunda FEEL built-ins ([bpmn-io/feel-editor#65](https://github.com/bpmn-io/feel-editor/pull/65))
+* `FIX`: make name change behavior not break on name change ([bpmn-io/dmn-js#917](https://github.com/bpmn-io/dmn-js/pull/917))
+* `FIX`: display updated formal parameters suggestions ([bpmn-io/dmn-js#914](https://github.com/bpmn-io/dmn-js/pull/914))
 
 ### Breaking Changes
 
