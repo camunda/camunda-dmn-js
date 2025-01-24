@@ -6,6 +6,18 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.1.0
+
+* `DEPS`: update to `diagram-js@15.2.4`
+* `DEPS`: update to `dmn-js@17.1.0`
+* `DEPS`: update to `dmn-js-drd@17.1.0`
+
+### Key Changes in Modeling
+
+* `FEAT`: suggest latest Camunda FEEL built-ins ([bpmn-io/feel-editor#65](https://github.com/bpmn-io/feel-editor/pull/65))
+* `FIX`: make name change behavior not break on name change ([bpmn-io/dmn-js#917](https://github.com/bpmn-io/dmn-js/pull/917))
+* `FIX`: display updated formal parameters suggestions ([bpmn-io/dmn-js#914](https://github.com/bpmn-io/dmn-js/pull/914))
+
 ## 3.0.0
 
 * `DEPS`: update to `diagram-js@15.2.1`
