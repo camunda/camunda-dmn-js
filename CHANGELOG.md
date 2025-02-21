@@ -6,9 +6,9 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
-### Key Changes in Properties Panel
+## 3.1.1
 
-* `FIX`: display only a single version tag field in Camunda 7
+* `FIX`: display only a single version tag field in Camunda 7 ([#141](https://github.com/camunda/camunda-dmn-js/pull/141))
 
 ## 3.1.0
 
