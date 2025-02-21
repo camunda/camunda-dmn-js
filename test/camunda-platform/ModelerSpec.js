@@ -78,6 +78,35 @@ describe('CamundaPlatformModeler', function() {
     });
 
 
+    it('should NOT inject Camunda 8 modules', async function() {
+
+      // when
+      const modeler = new Modeler({
+        container,
+        common: {
+          propertiesPanel: {
+            parent: propertiesContainer
+          },
+          overview: {
+            parent: overviewContainer
+          }
+        }
+      });
+
+      await modeler.importXML(diagramXML);
+
+      await modeler.open(modeler.getViews().find(({ type }) => type === 'drd'));
+
+      // assume
+      expect(modeler.getActiveView().type).to.eql('drd');
+
+      const viewer = modeler.getActiveViewer();
+
+      // then
+      expect(viewer.get('zeebePropertiesProvider', false)).not.to.exist;
+    });
+
+
     describe('additional modules', function() {
 
       it('should pass additional modules to boxed expression', async function() {

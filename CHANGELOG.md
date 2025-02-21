@@ -6,6 +6,10 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+### Key Changes in Properties Panel
+
+* `FIX`: display only a single version tag field in Camunda 7
+
 ## 3.1.0
 
 * `DEPS`: update to `diagram-js@15.2.4`
