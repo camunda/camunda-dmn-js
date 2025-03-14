@@ -6,6 +6,14 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.2.0
+
+* `DEPS`: update to `dmn-js@17.2.0`
+
+### Key Changes in Modeling
+
+* `FEAT`: add delete action for multi element context ([bpmn-io/dmn-js#939](https://github.com/bpmn-io/dmn-js/pull/939))
+
 ## 3.1.1
 
 * `FIX`: display only a single version tag field in Camunda 7 ([#141](https://github.com/camunda/camunda-dmn-js/pull/141))
