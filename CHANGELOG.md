@@ -6,6 +6,15 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.3.0
+
+* `FEAT`: trim whitespace in text inputs ([bpmn-io/properties-panel#404](https://github.com/bpmn-io/properties-panel/issues/404), [bpmn-io/properties-panel#309](https://github.com/bpmn-io/properties-panel/issues/309))
+* `FIX`: correct completion of lang-feel snippets ([@bpmn-io/feel-editor#70](https://github.com/bpmn-io/feel-editor/pull/75))
+* `FIX`: make tooltip persist when trying to copy from it ([bpmn-io/properties-panel#399](https://github.com/bpmn-io/properties-panel/pull/399))
+* `FIX`: remove input border from popups ([bpmn-io/properties-panel#398](https://github.com/bpmn-io/properties-panel/pull/398))
+* `DEPS`: update to `dmn-js@17.2.1`
+* `DEPS`: update to `dmn-js-properties-panel@3.8.0`
+
 ## 3.2.0
 
 * `DEPS`: update to `dmn-js@17.2.0`
