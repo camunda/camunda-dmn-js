@@ -6,6 +6,15 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.4.0
+
+* `DEPS`: update to `dmn-js@17.3.0`
+
+### Key Changes in Modeling
+
+* `FEAT`: FEEL now defaults to `camunda` parserDialect ([#145](https://github.com/camunda/camunda-dmn-js/pull/145))
+* `FEAT`: Input entries of a decision table use the unary-tests language dialect ([bpmn-io/dmn-js#947](https://github.com/bpmn-io/dmn-js/pull/947))
+
 ## 3.3.0
 
 * `DEPS`: update to `dmn-js@17.2.1`
@@ -20,6 +29,7 @@ ___Note:__ Yet to be released changes appear here._
 * `FEAT`: trim whitespace in text inputs ([bpmn-io/properties-panel#404](https://github.com/bpmn-io/properties-panel/issues/404), [bpmn-io/properties-panel#309](https://github.com/bpmn-io/properties-panel/issues/309))
 * `FIX`: make tooltip persist when trying to copy from it ([bpmn-io/properties-panel#399](https://github.com/bpmn-io/properties-panel/pull/399))
 * `FIX`: remove input border from popups ([bpmn-io/properties-panel#398](https://github.com/bpmn-io/properties-panel/pull/398))
+
 ## 3.2.0
 
 * `DEPS`: update to `dmn-js@17.2.0`
