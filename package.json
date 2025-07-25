@@ -71,7 +71,7 @@
     "babel-plugin-inferno": "~5.1.0",
     "babel-plugin-istanbul": "^7.0.0",
     "chai": "^4.5.0",
-    "cross-env": "^7.0.3",
+    "cross-env": "^10.0.0",
     "dmn-js-properties-panel": "^3.8.0",
     "dmn-js-shared": "^17.3.0",
     "eslint": "^9.14.0",
