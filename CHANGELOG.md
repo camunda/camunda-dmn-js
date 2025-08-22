@@ -6,6 +6,16 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.5.0
+
+* `DEPS`: update to `dmn-js@17.4.0`
+
+### Key Changes in Modeling
+
+* `FEAT`: suggest latest Camunda FEEL built-ins, now loaded from `feel-builtins` ([@bpmn-io/feel-editor#71](https://github.com/bpmn-io/feel-editor/pull/71))
+* `FEAT`: support multiline feel strings in `camunda` dialect ([@bpmn-io/lezer-feel#2](https://github.com/bpmn-io/lezer-feel/pull/2))
+* `FIX`: recognize unclosed feel string literal as syntax error ([nikku/lezer-feel#52](https://github.com/nikku/lezer-feel/pull/52))
+
 ## 3.4.0
 
 * `DEPS`: update to `dmn-js@17.3.0`
