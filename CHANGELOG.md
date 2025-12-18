@@ -6,6 +6,15 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.6.0
+
+* `DEPS`: update to `dmn-js@17.5.0`
+* `DEPS`: update to `dmn-js-properties-panel@3.9.0`
+
+### Key Changes in Properties Panel
+
+* `FEAT`: save value on blur
+
 ## 3.5.0
 
 * `DEPS`: update to `dmn-js@17.4.0`
