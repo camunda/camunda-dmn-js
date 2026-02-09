@@ -1,7 +1,10 @@
+import { expect } from 'chai';
+
 import diagramXML from '../../../fixtures/simple.dmn';
 import functionDefinitionXML from '../../../fixtures/function-definition.dmn';
 
 import { bootstrapBaseModeler, inject } from '../../../helper';
+
 
 describe('CamundaVariableProvider', function() {
 

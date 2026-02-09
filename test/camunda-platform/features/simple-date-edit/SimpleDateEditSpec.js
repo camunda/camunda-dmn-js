@@ -1,3 +1,5 @@
+import { expect } from 'chai';
+
 import {
   query as domQuery,
   queryAll as domQueryAll
@@ -16,6 +18,7 @@ import {
 import simpleDateEditXML from './simple-date-edit.dmn';
 
 import { getSampleDate } from '../../../../lib/camunda-platform/features/simple-date-edit/Utils';
+
 
 describe('camunda-platform/simple-date-edit', function() {
 

@@ -1,3 +1,5 @@
+import { expect } from 'chai';
+
 import MochaTestContainer from 'mocha-test-container-support/lib/MochaTestContainer';
 
 import Modeler from '../../lib/camunda-cloud/Modeler';
