@@ -88,7 +88,7 @@
     "karma-mocha": "^2.0.1",
     "karma-safari-launcher": "^1.0.0",
     "karma-webpack": "^5.0.1",
-    "min-dom": "^5.1.1",
+    "min-dom": "^5.2.0",
     "mocha": "^11.7.5",
     "mocha-test-container-support": "^0.2.0",
     "npm-run-all2": "^8.0.4",
