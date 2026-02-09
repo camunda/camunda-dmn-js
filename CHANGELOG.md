@@ -6,6 +6,21 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.7.0
+
+* `DEPS`: update to `camunda-dmn-moddle@1.3.1`
+* `DEPS`: update to `dmn-js-properties-panel@3.10.0`
+* `DEPS`: update to `dmn-js@17.6.0`
+* `DEPS`: update to `diagram-js@15.9.0`
+* `DEPS`: update to `min-dom@5.2.0`
+* `DEPS`: update to `min-dash@5.0.0`
+* `DEPS`: update to `diagram-js-grid@2.0.0`
+
+### Key Changes in DRD modeling
+
+* `FEAT`: activate wheel zoom/scroll on `mouseover` ([bpmn-io/diagram-js#1008](https://github.com/bpmn-io/diagram-js/pull/1008))
+* `FIX`: ensure keyboard navigation in popup menu accounts for group order ([bpmn-io/diagram-js#989](https://github.com/bpmn-io/diagram-js/pull/989))
+
 ## 3.6.0
 
 * `DEPS`: update to `dmn-js@17.5.0`
