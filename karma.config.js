@@ -14,10 +14,10 @@ var suite = coverage ? 'test/coverage.js' : 'test/suite.js';
 // any of [ 'ChromeHeadless', 'Chrome', 'Firefox', 'Safari' ]
 var browsers = (process.env.TEST_BROWSERS || 'ChromeHeadless').split(',');
 
-// use puppeteer provided Chrome for testing
-process.env.CHROME_BIN = require('puppeteer').executablePath();
+module.exports = async function(karma) {
 
-module.exports = function(karma) {
+  // use puppeteer provided Chrome for testing
+  process.env.CHROME_BIN = await require('puppeteer').executablePath();
   var config = {
 
     basePath,
