@@ -91,7 +91,7 @@
     "min-dom": "^5.2.0",
     "mocha": "^11.7.5",
     "mocha-test-container-support": "^0.2.0",
-    "npm-run-all2": "^8.0.4",
+    "npm-run-all2": "^9.0.0",
     "puppeteer": "^25.0.0",
     "raw-loader": "^4.0.2",
     "rimraf": "^6.1.2",
