@@ -14,6 +14,7 @@ ___Note:__ Yet to be released changes appear here._
 * `DEPS`: update to `dmn-js@17.10.0`
 * `DEPS`: update to `dmn-js-drd@17.10.0`
 * `DEPS`: update to `dmn-js-shared@17.10.0`
+* `DEPS`: update to `dmn-js-properties-panel@3.11.1`
 
 ## 3.7.0
 
