@@ -73,7 +73,7 @@
     "babel-plugin-istanbul": "^8.0.0",
     "chai": "^6.2.2",
     "cross-env": "^10.1.0",
-    "dmn-js-properties-panel": "^3.10.0",
+    "dmn-js-properties-panel": "^3.11.1",
     "eslint": "^9.39.2",
     "eslint-plugin-bpmn-io": "^2.2.0",
     "execa": "^10.0.0",
