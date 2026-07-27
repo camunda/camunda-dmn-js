@@ -6,6 +6,15 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.8.0
+
+* `DEPS`: update to `diagram-js@15.23.0`
+* `DEPS`: update to `diagram-js-grid@2.0.1`
+* `DEPS`: update to `diagram-js-origin@1.4.0`
+* `DEPS`: update to `dmn-js@17.10.0`
+* `DEPS`: update to `dmn-js-drd@17.10.0`
+* `DEPS`: update to `dmn-js-shared@17.10.0`
+
 ## 3.7.0
 
 * `DEPS`: update to `camunda-dmn-moddle@1.3.1`
