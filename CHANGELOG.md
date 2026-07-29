@@ -6,6 +6,17 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.8.1
+
+* `DEPS`: update to `diagram-js@15.23.2`
+* `DEPS`: update to `dmn-js@17.10.1`
+* `DEPS`: update to `dmn-js-drd@17.10.1`
+* `DEPS`: update to `dmn-js-shared@17.10.1`
+
+### Key Changes in DRD modeling
+
+* `FIX`: prevent clipped strokes in exported diagrams ([bpmn-io/dmn-js#1017](https://github.com/bpmn-io/dmn-js/pull/1017))
+
 ## 3.8.0
 
 * `DEPS`: update to `diagram-js@15.23.0`
