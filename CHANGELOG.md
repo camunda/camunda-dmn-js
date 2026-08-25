@@ -6,6 +6,12 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.8.2
+
+* `FIX`: do not create a variable per default ([#176](https://github.com/camunda/camunda-dmn-js/pull/176))
+* `FIX`: open literal expression decisions without variable element ([bpmn-io/dmn-js#1023](https://github.com/bpmn-io/dmn-js/pull/1023))
+* `DEPS`: update to `dmn-js@17.10.2`
+
 ## 3.8.1
 
 * `DEPS`: update to `diagram-js@15.23.2`
