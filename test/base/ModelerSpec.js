@@ -198,6 +198,40 @@ describe('BaseModeler', function() {
   });
 
 
+  describe('variable creation', function() {
+
+    it('should NOT create a variable for a new decision', async function() {
+
+      // given
+      const modeler = new Modeler({ container, common: {
+        propertiesPanel: {
+          parent: propertiesContainer
+        },
+        overview: {
+          parent: overviewContainer
+        }
+      } });
+
+      await modeler.importXML(drdXML);
+      await modeler.open(modeler.getViews().find(({ type }) => type === 'drd'));
+
+      const viewer = modeler.getActiveViewer();
+      const canvas = viewer.get('canvas');
+      const elementFactory = viewer.get('elementFactory');
+      const modeling = viewer.get('modeling');
+
+      const rootElement = canvas.getRootElement();
+
+      // when
+      const decision = elementFactory.createShape({ type: 'dmn:Decision' });
+      modeling.createShape(decision, { x: 100, y: 100 }, rootElement);
+
+      // then
+      expect(decision.businessObject.variable).not.to.exist;
+    });
+  });
+
+
   describe('disableGrid', function() {
 
     it('should NOT disable grid per default', async function() {
