@@ -6,6 +6,10 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.8.3
+
+* `FIX`: hide variable group for decisions in properties panel ([#177](https://github.com/camunda/camunda-dmn-js/pull/177))
+
 ## 3.8.2
 
 * `FIX`: do not create a variable per default ([#176](https://github.com/camunda/camunda-dmn-js/pull/176))
