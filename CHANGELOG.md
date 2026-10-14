@@ -6,6 +6,14 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 3.9.0
+
+* `FEAT`: source colors and corner radii from `@bpmn-io/theme` tokens. The `--color-*` palette variables are removed. Override the `--bio-*` tokens instead. ([bpmn-io/dmn-js#1028](https://github.com/bpmn-io/dmn-js/pull/1028))
+* `DEPS`: update to `diagram-js@15.28.1`
+* `DEPS`: update to `dmn-js@17.12.3`
+* `DEPS`: update to `dmn-js-drd@17.12.3`
+* `DEPS`: update to `dmn-js-shared@17.12.3`
+
 ## 3.8.3
 
 * `FIX`: hide variable group for decisions in properties panel ([#177](https://github.com/camunda/camunda-dmn-js/pull/177))
