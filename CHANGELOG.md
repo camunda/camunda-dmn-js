@@ -6,13 +6,42 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
-* `FEAT`: remove decision service from the palette
+* `FEAT`: remove decision service from the palette; decision services (added in `dmn-js@17.13.0`) can be opened and edited but not created via the palette
 * `DEPS`: update to `dmn-js@18.0.0`
 * `DEPS`: update to `dmn-js-drd@18.0.0`
 * `DEPS`: update to `dmn-js-shared@18.0.0`
-* `DEPS`: require `dmn-js-properties-panel@^3.13.0` as peer dependency
-* `DEPS`: update to `diagram-js-origin@1.4.2`
 * `DEPS`: update to `diagram-js-grid@2.1.0`
+* `DEPS`: update to `diagram-js-origin@1.4.2`
+* `DEPS`: require `dmn-js-properties-panel@^3.13.0` as peer dependency
+
+### Key Changes in DRD modeling
+
+* `FEAT`: show icon for decision service in properties panel header
+* `FEAT`: support grouping data types; data types provided via `DataTypes#registerProvider` are objects with `name`, `label` and `group`, shown grouped in type dropdowns ([bpmn-io/dmn-js#1039](https://github.com/bpmn-io/dmn-js/pull/1039), [bpmn-io/dmn-js-properties-panel#151](https://github.com/bpmn-io/dmn-js-properties-panel/pull/151))
+* `FEAT`: allow registering data types providers via `DataTypes#registerProvider` ([bpmn-io/dmn-js#1035](https://github.com/bpmn-io/dmn-js/pull/1035))
+* `FEAT`: show named item definitions of the diagram as custom data types in type dropdowns ([bpmn-io/dmn-js#1018](https://github.com/bpmn-io/dmn-js/issues/1018), [bpmn-io/dmn-js#1029](https://github.com/bpmn-io/dmn-js/pull/1029), [bpmn-io/dmn-js#1048](https://github.com/bpmn-io/dmn-js/pull/1048))
+* `FEAT`: add `getDefinitions` to the DRD, decision table, literal expression and boxed expression viewers ([bpmn-io/dmn-js#1048](https://github.com/bpmn-io/dmn-js/pull/1048))
+* `FEAT`: support letter shortcuts on non-Latin keyboard layouts ([bpmn-io/diagram-js#1112](https://github.com/bpmn-io/diagram-js/pull/1112), [bpmn-io/diagram-js#928](https://github.com/bpmn-io/diagram-js/issues/928))
+* `FEAT`: add tooltip with title and shortcut on palette entries ([bpmn-io/diagram-js#1082](https://github.com/bpmn-io/diagram-js/pull/1082))
+* `FEAT`: source DRD canvas colors and corner radii from `@bpmn-io/theme` tokens ([bpmn-io/diagram-js#1102](https://github.com/bpmn-io/diagram-js/pull/1102))
+* `FEAT`: give resize handle and segment dragger a border radius ([bpmn-io/diagram-js#1100](https://github.com/bpmn-io/diagram-js/pull/1100))
+* `FEAT`: add `--accent-color` theming token ([bpmn-io/diagram-js#1099](https://github.com/bpmn-io/diagram-js/pull/1099))
+* `FIX`: use WCAG AA compliant primary accent color ([bpmn-io/diagram-js#1099](https://github.com/bpmn-io/diagram-js/pull/1099))
+* `FIX`: prevent overflowing of text when layouting it ([bpmn-io/diagram-js#1106](https://github.com/bpmn-io/diagram-js/pull/1106), [bpmn-io/diagram-js#1105](https://github.com/bpmn-io/diagram-js/pull/1105))
+* `FIX`: prevent text layouting from looping in certain scenarios ([bpmn-io/diagram-js#1106](https://github.com/bpmn-io/diagram-js/pull/1106), [bpmn-io/diagram-js#1105](https://github.com/bpmn-io/diagram-js/pull/1105))
+* `FIX`: cancel canvas move on diagram destroy ([bpmn-io/diagram-js#1110](https://github.com/bpmn-io/diagram-js/pull/1110), [bpmn-io/diagram-js#1109](https://github.com/bpmn-io/diagram-js/issues/1109))
+* `FIX`: do not keep selection visible after diagram destroy ([bpmn-io/diagram-js#1098](https://github.com/bpmn-io/diagram-js/pull/1098))
+* `FIX`: use FEEL data type names `date and time`, `years and months duration` and `days and time duration` ([bpmn-io/dmn-js#1013](https://github.com/bpmn-io/dmn-js/issues/1013), [bpmn-io/dmn-js#1039](https://github.com/bpmn-io/dmn-js/pull/1039))
+* `FIX`: clear element variable type in boxed expression instead of persisting an empty one ([bpmn-io/dmn-js#1039](https://github.com/bpmn-io/dmn-js/pull/1039))
+* `FIX`: show example values as placeholders in simple date, time and duration editors ([bpmn-io/dmn-js#1039](https://github.com/bpmn-io/dmn-js/pull/1039))
+
+### Breaking Changes
+
+Inherited from `dmn-js@18.0.0`, cf. its [changelog](https://github.com/bpmn-io/dmn-js/blob/main/packages/dmn-js/CHANGELOG.md#1800):
+
+* The default data types `dateTime`, `yearMonthDuration` and `dayTimeDuration` are now `date and time`, `years and months duration` and `days and time duration`, as per the DMN specification. Newly picked types are persisted in the `typeRef` attribute with these names. Existing diagrams using the old names remain supported by the decision table's simple editors but are not migrated. Provide the old names via the `common.dataTypes` configuration if you depend on them, and adjust any engine or tooling that reads the `typeRef` values.
+* `dataTypes.getAll()` returns data type objects (`{ name, label, group? }`) instead of strings; data type providers receive and return such objects. Update custom code that reads or provides data types, i.e. use `dataType.name` as the `typeRef` value and `dataType.label` as the display text.
+* The DRD and decision table viewers are registered as `viewer` in their injector, instead of `drd` and `decisionTable`. Update custom modules that inject `drd` or `decisionTable` ([bpmn-io/dmn-js#1048](https://github.com/bpmn-io/dmn-js/pull/1048)).
 
 ## 3.9.0
 
@@ -456,7 +485,6 @@ ___Note:__ Yet to be released changes appear here._
 
 ## 0.6.1
 
-* `CHORE`: remove unused properties-panel peer dependency ([#23](https://github.com/camunda/camunda-dmn-js/pull/23))
 
 ## 0.6.0
 
@@ -509,4 +537,3 @@ ___Note:__ Yet to be released changes appear here._
 
 ## 0.1.0
 
-* `CHORE`: first release 🎉
