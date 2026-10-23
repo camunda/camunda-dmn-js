@@ -6,6 +6,11 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+* `DEPS`: update to `dmn-js@18.0.0`
+* `DEPS`: update to `dmn-js-drd@18.0.0`
+* `DEPS`: update to `dmn-js-shared@18.0.0`
+* `DEPS`: require `dmn-js-properties-panel@^3.13.0` as peer dependency
+
 ## 3.9.0
 
 * `FEAT`: source colors and corner radii from `@bpmn-io/theme` tokens. The `--color-*` palette variables are removed. Override the `--bio-*` tokens instead. ([bpmn-io/dmn-js#1028](https://github.com/bpmn-io/dmn-js/pull/1028))

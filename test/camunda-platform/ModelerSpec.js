@@ -190,10 +190,10 @@ describe('CamundaPlatformModeler', function() {
       function(dataTypes) {
 
         // when
-        const dataTypesList = dataTypes.getAll();
+        const dataTypeNames = dataTypes.getAll().map(({ name }) => name);
 
         // then
-        expect(dataTypesList).to.eql([
+        expect(dataTypeNames).to.eql([
           'string',
           'boolean',
           'integer',
