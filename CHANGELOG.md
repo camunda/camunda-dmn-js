@@ -6,6 +6,8 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
+## 4.0.0
+
 * `FEAT`: remove decision service from the palette; decision services (added in `dmn-js@17.13.0`) can be opened and edited but not created via the palette
 * `DEPS`: update to `dmn-js@18.0.0`
 * `DEPS`: update to `dmn-js-drd@18.0.0`
