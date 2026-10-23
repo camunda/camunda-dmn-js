@@ -110,17 +110,17 @@ body {
 
   const styles = [
     { name: 'test.css', css: testStyles },
-    { name: 'diagram-js.css', css: require('dmn-js/dist/assets/diagram-js.css').default },
-    { name: 'dmn-embedded.css', css: require('dmn-js/dist/assets/dmn-font/css/dmn-embedded.css').default },
-    { name: 'dmn-js-decision-table-controls.css', css: require('dmn-js/dist/assets/dmn-js-decision-table-controls.css').default },
-    { name: 'dmn-js-decision-table.css', css: require('dmn-js/dist/assets/dmn-js-decision-table.css').default },
-    { name: 'dmn-js-drd.css', css: require('dmn-js/dist/assets/dmn-js-drd.css').default },
-    { name: 'dmn-js-literal-expression.css', css: require('dmn-js/dist/assets/dmn-js-literal-expression.css').default },
-    { name: 'dmn-js-boxed-expression-controls.css', css: require('dmn-js/dist/assets/dmn-js-boxed-expression-controls.css').default },
-    { name: 'dmn-js-boxed-expression.css', css: require('dmn-js/dist/assets/dmn-js-boxed-expression.css').default },
-    { name: 'dmn-js-shared.css', css: require('dmn-js/dist/assets/dmn-js-shared.css').default },
-    { name: 'properties-panel.css', css: require('dmn-js-properties-panel/dist/assets/properties-panel.css').default },
-    { name: 'overview.css', css: require('../styles/overview.css').default }
+    { name: 'diagram-js.css', css: require('dmn-js/dist/assets/diagram-js.css') },
+    { name: 'dmn-embedded.css', css: require('dmn-js/dist/assets/dmn-font/css/dmn-embedded.css') },
+    { name: 'dmn-js-decision-table-controls.css', css: require('dmn-js/dist/assets/dmn-js-decision-table-controls.css') },
+    { name: 'dmn-js-decision-table.css', css: require('dmn-js/dist/assets/dmn-js-decision-table.css') },
+    { name: 'dmn-js-drd.css', css: require('dmn-js/dist/assets/dmn-js-drd.css') },
+    { name: 'dmn-js-literal-expression.css', css: require('dmn-js/dist/assets/dmn-js-literal-expression.css') },
+    { name: 'dmn-js-boxed-expression-controls.css', css: require('dmn-js/dist/assets/dmn-js-boxed-expression-controls.css') },
+    { name: 'dmn-js-boxed-expression.css', css: require('dmn-js/dist/assets/dmn-js-boxed-expression.css') },
+    { name: 'dmn-js-shared.css', css: require('dmn-js/dist/assets/dmn-js-shared.css') },
+    { name: 'properties-panel.css', css: require('dmn-js-properties-panel/dist/assets/properties-panel.css') },
+    { name: 'overview.css', css: require('../styles/overview.css') }
   ];
 
   styles.forEach(({ name, css }) => insertCSS(name, css));

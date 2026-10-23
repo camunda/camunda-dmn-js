@@ -75,7 +75,7 @@ module.exports = function(karma) {
           },
           {
             test: /\.(css|dmn)$/,
-            use: 'raw-loader'
+            type: 'asset/source'
           }
         ]
       },
