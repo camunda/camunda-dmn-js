@@ -10,6 +10,7 @@ ___Note:__ Yet to be released changes appear here._
 * `DEPS`: update to `dmn-js-drd@18.0.0`
 * `DEPS`: update to `dmn-js-shared@18.0.0`
 * `DEPS`: require `dmn-js-properties-panel@^3.13.0` as peer dependency
+* `DEPS`: update to `diagram-js-origin@1.4.2`
 * `DEPS`: update to `diagram-js-grid@2.1.0`
 
 ## 3.9.0
