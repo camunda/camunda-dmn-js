@@ -50,9 +50,9 @@
     "diagram-js": "^15.28.1",
     "diagram-js-grid": "^2.1.0",
     "diagram-js-origin": "^1.4.2",
-    "dmn-js": "^18.0.0",
-    "dmn-js-drd": "^18.0.0",
-    "dmn-js-shared": "^18.0.0",
+    "dmn-js": "^18.0.1",
+    "dmn-js-drd": "^18.0.1",
+    "dmn-js-shared": "^18.0.1",
     "min-dash": "^5.0.0",
     "zeebe-dmn-moddle": "^1.0.0"
   },
