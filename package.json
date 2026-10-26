@@ -1,6 +1,6 @@
 {
   "name": "camunda-dmn-js",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Embeddable Camunda modeling distributions based on dmn-js",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
