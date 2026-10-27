@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import MochaTestContainer from 'mocha-test-container-support/lib/MochaTestContainer';
 
 import Modeler from '../../lib/camunda-cloud/Modeler';
-import '../helper';
+import { setDmnJS } from '../helper';
 
 import diagramXML from '../fixtures/simple.dmn';
 
@@ -45,6 +45,8 @@ describe('CamundaCloudModeler', function() {
 
       // when
       const { warnings } = await modeler.importXML(diagramXML);
+
+      setDmnJS(modeler);
 
       // then
       expect(warnings).to.be.empty;

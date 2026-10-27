@@ -1,4 +1,5 @@
 import MochaTestContainer from 'mocha-test-container-support';
+import fileDrop from 'file-drops';
 import { insertCSS } from 'dmn-js/test/helper';
 
 import {
@@ -61,6 +62,10 @@ export function bootstrapCamundaCloudModeler(diagram, options = {}) {
   return bootstrapDmnJS(CamundaCloudModeler, diagram, options);
 }
 
+export function setDmnJS(dmnJS) {
+  DMN_JS = window.DMN_JS = dmnJS;
+}
+
 export function getDmnJS() {
   return DMN_JS;
 }
@@ -70,6 +75,15 @@ export function inject(fn) {
     return DMN_JS.getActiveViewer().invoke(fn);
   };
 }
+
+// open dropped DMN files in the currently active test
+document.documentElement.addEventListener('dragover', fileDrop('Drop a DMN diagram to open it in the currently active test.', function(files) {
+  const dmnJS = getDmnJS();
+
+  if (dmnJS && files.length === 1) {
+    dmnJS.importXML(files[0].contents);
+  }
+}));
 
 function insertStyles() {
   const testStyles = `
@@ -100,6 +114,18 @@ body {
 .overview-container {
   width: 500px;
   flex: 0 0 auto;
+}
+
+.drop-overlay .box {
+  background: orange;
+  border-radius: 3px;
+  display: inline-block;
+  font-family: sans-serif;
+  padding: 4px 10px;
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .overview-container:empty,

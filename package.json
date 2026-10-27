@@ -77,6 +77,7 @@
     "eslint": "^9.39.5",
     "eslint-plugin-bpmn-io": "^2.4.0",
     "execa": "^10.1.1",
+    "file-drops": "^0.7.0",
     "inferno": "~5.6.2",
     "karma": "^6.4.4",
     "karma-chrome-launcher-2": "^3.3.0",
