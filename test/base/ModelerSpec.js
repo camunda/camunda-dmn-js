@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import MochaTestContainer from 'mocha-test-container-support/lib/MochaTestContainer';
 
 import Modeler from '../../lib/base/Modeler';
-import '../helper';
+import { setDmnJS } from '../helper';
 
 import diagramXML from '../fixtures/simple.dmn';
 import drdXML from '../fixtures/diagram.dmn';
@@ -46,7 +46,7 @@ describe('BaseModeler', function() {
     // when
     const { warnings } = await modeler.importXML(diagramXML);
 
-    window.dmn = modeler;
+    setDmnJS(modeler);
 
     // then
     expect(warnings).to.be.empty;

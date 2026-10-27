@@ -5,7 +5,8 @@ import MochaTestContainer from 'mocha-test-container-support/lib/MochaTestContai
 import Modeler from '../../lib/camunda-platform/Modeler';
 import {
   bootstrapCamundaPlatformModeler,
-  inject
+  inject,
+  setDmnJS
 } from '../helper';
 
 import diagramXML from '../fixtures/simple.dmn';
@@ -49,6 +50,8 @@ describe('CamundaPlatformModeler', function() {
 
       // when
       const { warnings } = await modeler.importXML(diagramXML);
+
+      setDmnJS(modeler);
 
       // then
       expect(warnings).to.be.empty;
