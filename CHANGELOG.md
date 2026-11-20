@@ -6,10 +6,12 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
-* `FIX`: show the expression language badge in every decision table row and prevent excessive parsing time for malformed number ranges ([bpmn-io/dmn-js#647](https://github.com/bpmn-io/dmn-js/issues/647), [GHSA-827x-p4p3-vpw8](https://github.com/bpmn-io/dmn-js/security/advisories/GHSA-827x-p4p3-vpw8))
-* `FIX`: analyze FEEL paths following indexed access ([bpmn-io/feel-analyzer#14](https://github.com/bpmn-io/feel-analyzer/pull/14))
+## 4.1.0
+
 * `FEAT`: resize FEEL popups, keep them open while committing edits and remember their size and position ([bpmn-io/properties-panel#568](https://github.com/bpmn-io/properties-panel/pull/568), [#569](https://github.com/bpmn-io/properties-panel/pull/569), [#570](https://github.com/bpmn-io/properties-panel/pull/570))
 * `FEAT`: update descriptions for FEEL built-ins ([camunda/feel-builtins#47](https://github.com/camunda/feel-builtins/pull/47))
+* `FIX`: show the expression language badge in every decision table row and prevent excessive parsing time for malformed number ranges ([bpmn-io/dmn-js#647](https://github.com/bpmn-io/dmn-js/issues/647), [GHSA-827x-p4p3-vpw8](https://github.com/bpmn-io/dmn-js/security/advisories/GHSA-827x-p4p3-vpw8))
+* `FIX`: analyze FEEL paths following indexed access ([bpmn-io/feel-analyzer#14](https://github.com/bpmn-io/feel-analyzer/pull/14))
 * `FIX`: preserve wheel navigation settings, handle wheel events over overlays and avoid excessive text measurement time ([bpmn-io/diagram-js#1128](https://github.com/bpmn-io/diagram-js/pull/1128), [GHSA-h54p-wcrm-cv7w](https://github.com/bpmn-io/diagram-js/security/advisories/GHSA-h54p-wcrm-cv7w))
 * `FIX`: escape namespace URIs and reference IDs when exporting DMN XML ([GHSA-7f6h-27xg-f2fh](https://github.com/bpmn-io/moddle-xml/security/advisories/GHSA-7f6h-27xg-f2fh))
 
