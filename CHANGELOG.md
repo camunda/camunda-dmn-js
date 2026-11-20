@@ -6,7 +6,6 @@ All notable changes to [camunda-dmn-js](https://github.com/camunda/camunda-dmn-j
 
 ___Note:__ Yet to be released changes appear here._
 
-* `FEAT`: create variables with `typeRef="Any"` for new business knowledge models and decision services ([bpmn-io/dmn-js#1051](https://github.com/bpmn-io/dmn-js/issues/1051))
 * `FIX`: show the expression language badge in every decision table row and prevent excessive parsing time for malformed number ranges ([bpmn-io/dmn-js#647](https://github.com/bpmn-io/dmn-js/issues/647), [GHSA-827x-p4p3-vpw8](https://github.com/bpmn-io/dmn-js/security/advisories/GHSA-827x-p4p3-vpw8))
 * `FIX`: analyze FEEL paths following indexed access ([bpmn-io/feel-analyzer#14](https://github.com/bpmn-io/feel-analyzer/pull/14))
 * `FEAT`: resize FEEL popups, keep them open while committing edits and remember their size and position ([bpmn-io/properties-panel#568](https://github.com/bpmn-io/properties-panel/pull/568), [#569](https://github.com/bpmn-io/properties-panel/pull/569), [#570](https://github.com/bpmn-io/properties-panel/pull/570))
